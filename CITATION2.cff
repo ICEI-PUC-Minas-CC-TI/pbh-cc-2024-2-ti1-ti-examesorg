@@ -1,0 +1,30 @@
+cff-version: 1.0.2
+message: Please cite this software using these metadata.
+title: ExamesOrg 
+authors:
+  - family-names: Galarza Alves
+    given-names: Izadora
+  - family-names: De Oliveira Mafra
+    given-names: Felipe
+  - family-names: De Sena Sampaio
+    given-names: Rafael
+  - family-names: Esteves Reis 
+    given-names: Mateus
+  - family-names: Silva Barros
+    given-names: Felipe
+  - family-names: Alves Goncalves
+    given-names: Daniel
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Soares Vieira de Vasconcelos
+    given-names: Amalia
+keywords:
+  - RH
+  - Exames
+  - Organizacao
+  - Periodico
+  - Empresa
+repository-code: 
+license: CC-BY-4.0
+version: 1.0.2
+date-released: 2024-09-22
