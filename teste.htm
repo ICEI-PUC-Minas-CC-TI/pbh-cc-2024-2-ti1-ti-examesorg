@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="container_form">
+        <h2>Formulário Teste</h2>
+        <form class="form" action="#" method="post">
+            <div class="form-grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome:" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite o seu email:" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="datadenascimento">Data de Nascimento:</label>
+                <input type="date" name="datadenascimento" id="datadenascimento" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="idade">Idade:</label>
+                <input type="text" name="idade" id="idade">
+            </div>
+
+            <div class="form-grupo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXXXXXX">
+            </div>
+
+            <div class="form-grupo">
+                <label for="sitepessoal">Site Pessoal:</label>
+                <input type="url" name="sitepessoal" id="sitepessoal" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="corfavorita">Cor favorita:</label>
+                <input type="color" name="corfavorita" id="corfavorita" onchange="changeBackgroundColor()">
+            </div>
+
+            <div class="form-grupo">
+                <label for="curriculo">Currículo:</label>
+                <input type="file" name="curriculo" id="curriculo">
+            </div>
+
+            <div class="form-grupo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem aqui:"></textarea>
+            </div>
+
+            <div class="form-grupo">
+                <label>Gênero:</label>
+                <input type="radio" name="genero" id="genero-masculino">
+                <label for="genero-masculino">Masculino</label><br>
+                <input type="radio" name="genero" id="genero-feminino">
+                <label for="genero-feminino">Feminino</label><br>
+                <input type="radio" name="genero" id="genero-outro">
+                <label for="genero-outro">Outro</label>
+            </div>
+
+            <div class="form-grupo">
+                <label>Hobbies:</label>
+                <input type="checkbox" name="hobbies" id="hobbies-esportes">
+                <label for="hobbies-esportes">Esportes</label>
+                <input type="checkbox" name="hobbies" id="hobbies-musica">
+                <label for="hobbies-musica">Música</label>
+                <input type="checkbox" name="hobbies" id="hobbies-leitura">
+                <label for="hobbies-leitura">Leitura</label>
+            </div>
+
+            <div class="form-grupo">
+                <label for="estado">Cidade:</label>
+                <select name="estado" id="estado">
+                    <option value="">Selecione o Estado</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="am">Amazonas</option>
+                    <option value="ap">Amapá</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="go">Goiás</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="rr">Roraima</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="se">Sergipe</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="to">Tocantins</option>
+                </select>
+            </div>
+
+            <div class="form-grupo">
+                <input type="submit" name="enviar" value="Enviar">
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
