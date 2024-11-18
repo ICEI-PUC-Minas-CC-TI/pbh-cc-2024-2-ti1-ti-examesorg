@@ -1,78 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/login.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="banner">
-        <img src="./assets/images/banner_ti.png" alt="" />
-      </div>
-      <div class="barra-info">
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <div class="dados-usuario">
-          <span id="userInfo"></span>
-        </div>
-      </div>
-    </header>
-    <main>
-        <h3>Boas vindas</h3>
-        <p>Sejam bem-vindos à home-page do projeto de TI 1 - Trabalho
-        Interdisciplinar</p>
-        <p>Esse conteúdo que você está lendo foi criado para exemplificar como
-        criar o seu site integrado com o ambiente de login e o back end que
-        utiliza o JSON Server.</p>
-        <p>Ao criar o seu site, você deve adaptar esse código para sua neessidade ou começar do zero, excluindo todo esse conteúdo.
-        </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icone verde pfundo_cinza.png" sizes="16x16" type="image/png">
+</head>
 
-        <h3>Arquivos do site (Front End)</h3>
-        <p>Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta <code>public</code> que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.</p>
+<body>
+    <body>
+        <header>
+            <img src="logo principal pfundo_cinza.png" alt="Logo Exams Org">
+            <div>
+                <button class="botao-sair">
+                    Voltar 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00FFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta">
+                        <polyline points="15 18 9 12 15 6"> </polyline>
+                    </svg>
+                </button>
+            </div>
+        </header>
+   
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Endereço de Cobrança</h3>
+                    <div class="input-box">
+                        <span>Nome completo : </span>
+                        <input type="text" placeholder="Edson Arantes do Nascimento" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Email : </span>
+                        <input type="email" placeholder="edsonarantes@gmail.com" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Endereço : </span>
+                        <input type="text" placeholder="Rua - Numero - Bairro" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Cidade : </span>
+                        <input type="text" placeholder="Belo Horizonte" required>
+                    </div>
 
-        <p>Nesta pasta <code>public</code>, sugerimos que você organize os arquivos do seu site da seguinte maneira:</p>
-        <ul>
-            <li><strong>Pasta <code>assets</code></strong>: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.</li>
-            <li><strong>Pasta <code>modulos</code></strong>: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.</li>
-            <li><strong>Arquivo <code>index.html</code></strong>: arquivo que representa a "home page" do site.</li>
-        </ul>
+                    <div class="flex"></div>
+                    <div class="input-box">
+                        <span>Estado : </span>
+                        <input type="text" placeholder="Minas Gerais" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Cep : </span>
+                        <input type="text" placeholder="31456-105" required>
+                    </div>
+                </div>
 
-        <h3>Módulo de Login</h3>
-        <p>O módulo de login de usuário traz uma funcionalidade completa de registro de usuários e validação de login e senha.</p>
-        <h4>Integração do site com módulo de Login</h4>
-        <p>Para utilizar o módulo de login, basta incluir o script na sua página colocando a seguinte tag no HEAD</p>
-        <pre>&lt;script src="./assets/js/login.js"&gt&lt;script&gt;</pre>
-        <p>Ao incluir o script de login na sua página, caso o usuário ainda não tenha efetuado login, ao acessar a home-page do site, o navegador será direcionado para o formulário de <strong>Identificação de Usuário</strong>. Se o usuário informar corretamente o login e a senha, o navegador será direcionado para a Home-Page.</p>
-        <h4>Sessão do usuário logado</h4>
-        <p>Assim que o usuário se identifica e acessa a parte privada do site, o módulo de login cria uma chave do sessionStorage do navegador com o título <strong>usuarioCorrente</strong> e cujo conteúdo é um objeto com os atributos: id, nome, login, senha e email. </p>
-        <h4>Base de dados de usuários</h4>
-        <p>Inicialmente o módulo de login é configurado com dois usuários: </p>
-        <ul>
-            <li>admin - Senha: 123</li>
-            <li>user - Senha: 123</li>
-        </ul>
+                <div class="column">
+                    <h3 class="title">Pagamento</h3>
+                    <div class="input-box">
+                        <span>Cartões Aceitos : </span>
+                        <img src="imgcards.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Nome impresso no Cartão : </span>
+                        <input type="text" placeholder="Edson Arantes do Nascimento" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Número do Cartão : </span>
+                        <input type="text" placeholder="9999 9999 9999 9999" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Mês. Exp : </span>
+                        <input type="text" placeholder="Março" required>
+                    </div>
 
-        <h3>Servidor Web e API baseada no JSON Server (Back end)</h3>
-        <p>O ambiente de trabalho disponibilizado para suportar o Trabalho Interdisciplinar 1 é baseado no Node.js. A aplicação de back end utiliza o módulo JSON Server para criar um Servidor Web que prove duas estruturas separadas:
-        <ul>
-            <li><strong>Arquivos estáticos (Pasta <code>public</code>)</strong>: da acesso aos arquivos utilizados no front end (HTML, CSS e JavaScript).</li>
-            <li><strong>API RESTful (pasta <code>db</code>)</strong>: uma interface para acesso aos dados definidos no arquivo db.json.</li>
-        </ul></p>
+                    <div class="flex"></div>
+                    <div class="input-box">
+                        <span>Ano. Exp:</span>
+                        <input type="text" placeholder="2032" required>
+                    </div>
+                    <div class="input-box">
+                        <span>CVV : </span>
+                        <input type="text" placeholder="456" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Parcelas: </span>
+                        <select name="installments" id="installments">
+                            <option value="1">1x sem juros</option>
+                            <option value="2">2x sem juros</option>
+                            <option value="3">3x sem juros</option>
+                            <option value="4">4x sem juros</option>
+                            <option value="5">5x sem juros</option>
+                            <option value="6">6x sem juros</option>
+                            <option value="7">7x sem juros</option>
+                            <option value="8">8x sem juros</option>
+                            <option value="9">9x sem juros</option>
+                            <option value="10">10x sem juros</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="payment-success" class="hidden">
+                <p>Pagamento Concluído com Sucesso!</p>
+            </div>
+            <button type="submit" class="Botao">Enviar</button>
+        </form>
+    </div>
+    <div class="footer">
+        <footer class="footer-content">
+            <div class="logo-redes">
+                <div class="logo">
+                    <img src="logo principal pfundo_cinza.png" alt="Logo Examsorg" style="height: 50px;">
+                </div>
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com" target="_blank" class="redesocial"><img src="logoinsta.png" alt="Instagram" style="height: 30px;"></a>
+                    <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img src="logowhatsapp.png" alt="WhatsApp" style="height: 30px;"></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img src="logotiktok.png" alt="TikTok" style="height: 30px;"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="redesocial"><img src="logoface.png" alt="Facebook" style="height: 30px;"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="redesocial"><img src="logoyoutube.svg" alt="LinkedIn" style="height: 30px;"></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img src="logolinkedin.png" alt="LinkedIn" style="height: 30px;"></a>
+                </div>
+                <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+            </div>
+            <div class="info-contato">
+                <div class="entre-contato">
+                    <p>
+                        <img src="telefone.svg" alt="icon telefone" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                    </p>
+                    <p>
+                        <img src="email.svg" alt="icon email" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com" class="link-email">contato@examsorg.com</a>
+                    </p>
+                </div>
+                    <input type="email" class="input-email-footer" placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+            </div>
+            
+            <div class="ultima-coluna">
+                <div class="certificados">
+                    <div class="certificado-logos">
+                        <img src="siteseguro.svg" alt="Site 100% siteseguro" style="height: 30px; padding-right: 15px;">
+                        <img src="fsccertificado.svg" alt="Certificado FSC" style="height: 30px; padding-right: 10px;">
+                        <img src="certificadogoogle.svg" alt="Certificado segurança by Google" style="height: 30px; padding-right: 10px;">
+                    </div>
+                </div>
+                <div class="pagamento-logos">
+                    <p class="text-pagamento">Formas de Pagamento:</p>
+                    <img src="logovisa.svg" alt="Visa" style="height: 25px;">
+                    <img src="logomastercard.svg" alt="Mastercard" style="height: 25px;">
+                    <img src="logopaypal.svg" alt="PayPal" style="height: 25px;">
+                    <img src="logodiscover.svg" alt="Discover" style="height: 25px;">
+                    <img src="logoelo.svg" alt="Elo" style="height: 25px;">
+                    <img src="logopix.svg" alt="Pix" style="height: 25px;">
+                    <img src="logoboletoo.svg" alt="Boleto" style="height: 25px;">
+                </div>
+            </div>
+        </footer>
+    <script>
+        function validateForm() {
+        const inputs = document.querySelectorAll('input[required]');
+        for (let input of inputs) {
+            if (input.value.trim() === '') {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                input.focus();
+                return false;
+            }
+        }
+        return true;
+    }
 
-        <h4>Arquitetura do site</h4>
-        <p>A imagem que se segue apresenta a arquitetura desse ambiente, mostrando as duas refletindo as pastas desse ambiente.</p>
-        <p><img class="img-fluid d-block w-75 m-auto" src="./assets/images/servidor.png" alt=""></p>
+    document.querySelector('.Botao').addEventListener('click', (event) => {
+        event.preventDefault(); 
 
-        <h4>Arquivo db.json</h4>
-        <p>O arquivo JSON utilizado para definição das estruturas dos dados providos pela aplicação é localizado na pasta db e tem um formato como o mostrado no exemplo da figura a seguir. Esse arquivo define uma estrutura hipotética de contatos que descreve itens com os seguintes atributos: <code>id</code>, <code>nome</code> e <code>cidade</code>. para o JSON Server, é fundamental que toda estrutura tenha um atributo de identificador de nome <code>id</code>.</p>
-        <p><img class="img-fluid d-block w-50 m-auto" src="./assets/images/arquivo_json.png" alt=""></p>
-    </main>
-  </body>
+        if (validateForm()) {
+            showPaymentSuccess(); 
+        }
+    });
+
+        function showPaymentSuccess() {
+            const paymentMessage = document.getElementById('payment-success');
+            paymentMessage.classList.remove('hidden'); 
+            setTimeout(() => {
+                paymentMessage.classList.add('show');
+            }, 100); 
+    
+            setTimeout(() => {
+                paymentMessage.classList.remove('show'); 
+                setTimeout(() => {
+                    paymentMessage.classList.add('hidden'); 
+                }, 1000); 
+            }, 3000);
+        }
+    
+        document.querySelector('.Botao').addEventListener('click', (event) =>{
+            event.preventDefault(); 
+            showPaymentSuccess(); 
+        });
+    </script>
+</body>
 </html>
+
