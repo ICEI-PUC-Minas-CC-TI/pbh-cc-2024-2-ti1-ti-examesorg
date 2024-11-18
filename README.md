@@ -1,6 +1,6 @@
-# Nome do projeto
+# HexamsOrg
 
-HexamsOrg - Site para facilitar a organização dos RHs e empresas na hora de marcar exames 
+Site para facilitar a organização dos RHs e empresas na hora de marcar exames 
 
 ## Alunos integrantes da equipe
 
