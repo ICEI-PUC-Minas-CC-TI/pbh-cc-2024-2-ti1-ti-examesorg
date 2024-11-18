@@ -1,26 +1,20 @@
 # Nome do projeto
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+HexamsOrg - Site para facilitar a organização dos RHs e empresas na hora de marcar exames 
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Izadora Galarza Alves
+* Daniel Alves Gonçalves
+* Rafael De Sena Sampaio
+* Felipe Silva Barros
+* Felipe De Oliveira Mafra
+* Mateus Esteves Reis
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Amália Soares Vieira De Vascocelos 
 
-
-
-## Instruções de utilização 
-
-> **IMPORTANTE: APAGUE ESSA SEÇÃO DE INSTRUÇÕES ANTES DE ENTREGAR SEU TRABALHO**
-
-No desenvolvimento desse trabalho, o grupo deverá utilizar esse repositório como local para entrega de todos os artefatos a serem produzidos. Em especial, o grupo deverá providenciar a alteração dos seguintes arquivos:
 
 * **Capa do projeto** (Esse arquivo aqui): Informação básica sobre o projeto, alunos do grupo e professores responsáveis;
 * **Arquivo CITATION.cff**: descritor do projeto, utilizado para geração do certificado ao final da disciplina.
