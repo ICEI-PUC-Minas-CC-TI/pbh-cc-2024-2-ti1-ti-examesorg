@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Online - Clínica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6c63ff, #3b3f9c);
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: #6c63ff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-right: 2px solid #ddd;
+            border-radius: 0 0 0 15px;
+        }
+
+        .main-content {
+            flex: 2;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #6c63ff;
+            font-size: 1.5rem;
+        }
+
+        .clinic {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            background: #fafafa;
+        }
+
+        .clinic h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .clinic button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .clinic button:hover {
+            background: #3b3f9c;
+        }
+
+        .calendar {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+
+        #selectedDate {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #timeSlots {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        #timeSlots li {
+            margin: 5px;
+            padding: 10px;
+            background: #6c63ff;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+            max-width: 100px;
+        }
+
+        #timeSlots li:hover,
+        #timeSlots li.selected {
+            background: #3b3f9c;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+            resize: none;
+        }
+
+        .calendar button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .calendar button:hover {
+            background: #3b3f9c;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 2px solid #ddd;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HexamesOrg</h1>
+        </header>
+        <div class="content">
+            <div class="sidebar">
+                <h2>Instituição</h2>
+                <p>Clínica Modelo Svianet</p>
+                <h2>Especialidade</h2>
+                <p>Todas as especialidades</p>
+            </div>
+            <div class="main-content">
+                <h2>Agendamento Online</h2>
+                <div class="clinic">
+                    <h3>Clínica 02</h3>
+                    <p>CRO-BA-CD-684684</p>
+                    <p>Endodontia</p>
+                    <p>
+                        25/09/2017 - 12 horários disponíveis - 
+                        <button onclick="showCalendar()">Agendar</button>
+                    </p>
+                    <p>
+                        26/09/2017 - 12 horários disponíveis - 
+                        <button onclick="showCalendar()">Agendar</button>
+                    </p>
+                    <p>Ou <button onclick="showCalendar()">Escolher Data</button></p>
+                </div>
+                <div id="calendar" class="calendar" style="display: none;">
+                    <h3>Selecione uma Data</h3>
+                    <input type="date" id="selectedDate">
+                    <h3>Horários Disponíveis</h3>
+                    <ul id="timeSlots">
+                        <!-- Horários preenchidos pelo JavaScript -->
+                    </ul>
+                    <textarea id="notes" placeholder="Observações"></textarea>
+                    <button onclick="scheduleAppointment()">Agendar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Online - Clínica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 800px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    float: left;
+    width: 200px;
+    background: #eee;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.calendar {
+    margin-top: 20px;
+}
+
+#timeSlots {
+    list-style: none;
+    padding: 0;
+}
+
+#timeSlots li {
+    margin: 5px 0;
+    background: #ddd;
+    padding: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>saúdevianet</h1>
+        </header>
+        <div class="sidebar">
+            <h2>INSTITUIÇÃO</h2>
+            <p>Clínica Modelo Svianet</p>
+            <h2>ESPECIALIDADE</h2>
+            <p>Todas especialidades</p>
+        </div>
+        <div class="main-content">
+            <h2>Agendamento online</h2>
+            <div class="clinic">
+                <h3>CLINICA 02</h3>
+                <p>CRO-BA-CD-684684</p>
+                <p>ENDODONTIA</p>
+                <p>25/09/2017 - 12 horários disponíveis - <button onclick="showCalendar()">AGENDAR</button></p>
+                <p>26/09/2017 - 12 horários disponíveis - <button onclick="showCalendar()">AGENDAR</button></p>
+                <p>ou <button onclick="showCalendar()">Escolher data</button></p>
+            </div>
+            <div id="calendar" class="calendar" style="display: none;">
+                <h3>Selecione uma data</h3>
+                <input type="date" id="selectedDate">
+                <h3>Horários disponíveis</h3>
+                <ul id="timeSlots">
+                    <!-- Horários serão preenchidos pelo JavaScript -->
+                </ul>
+                <textarea id="notes" placeholder="Observações"></textarea>
+                <button onclick="scheduleAppointment()">AGENDAR</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

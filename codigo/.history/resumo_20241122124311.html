@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f4f4f4; }
+        .actions button { margin: 0 5px; }
+    </style>
+</head>
+<body>
+    <h1>Gerenciamento de Usuários</h1>
+    <div>
+        <button id="import-btn">Importar Usuários</button>
+        <button id="export-btn">Exportar Usuários</button>
+        <input type="file" id="file-input" style="display:none;" accept=".json">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="user-table">
+            <!-- Usuários serão preenchidos dinamicamente -->
+        </tbody>
+    </table>
+</body>
+<script src="usuarios.js"></script>
+</html>
