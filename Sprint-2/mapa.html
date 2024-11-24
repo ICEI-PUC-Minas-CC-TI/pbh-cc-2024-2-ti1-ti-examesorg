@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Clínicas de Trabalho</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+        <header>
+            <img src="assets/images/logohexamsorg.png" alt="Logo da HexamsOrg">
+            <a href="NEXTPAGE/nextpage.html" aria-label="Voltar à página anterior"></a>
+            <div>
+                <button class="botao-sair" aria-label="Voltar à página anterior">
+                    <a href="NEXTPAGE/nextpage.html">Voltar</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#00FFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        
+        </header>
+        <div id="map"></div>
+        <script>
+            // Substitua pelo seu token de acesso ao Mapbox
+            mapboxgl.accessToken = 'pk.eyJ1IjoiaXphZ2FsYXJ6YTIzIiwiYSI6ImNtM3Z2ZGQyNzEyaXgyam9qbWFvNWswenMifQ.MmJwGIDdXisAVlT1HdDzzw';
+    
+            // Função para inicializar o mapa
+            function initializeMap(center) {
+                const map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: center,
+                    zoom: 13
+                });
+    
+                // Função para exibir a localização do usuário
+                navigator.geolocation.getCurrentPosition(
+                    position => {
+                        const userLocation = [position.coords.longitude, position.coords.latitude];
+                        
+                        // Centraliza no usuário
+                        map.setCenter(userLocation);
+    
+                        // Adiciona um marcador vermelho para a localização do usuário
+                        new mapboxgl.Marker({ color: 'red' })
+                            .setLngLat(userLocation)
+                            .setPopup(new mapboxgl.Popup().setHTML("<h3>Você está aqui!</h3>"))
+                            .addTo(map);
+    
+                        // Busca clínicas próximas
+                        fetchNearbyClinics(userLocation, map);
+                    },
+                    () => {
+                        alert('Não foi possível obter sua localização.');
+                    },
+                    { enableHighAccuracy: true }
+                );
+    
+                // Adiciona controles de zoom e rotação
+                map.addControl(new mapboxgl.NavigationControl());
+            }
+    
+            // Função para buscar clínicas próximas com "ocupacional" ou "trabalho" no nome
+            async function fetchNearbyClinics(location, map) {
+                const [lng, lat] = location;
+    
+                // Query para buscar clínicas genéricas
+                const query = `https://api.mapbox.com/geocoding/v5/mapbox.places/ocupacional.json?proximity=${lng},${lat}&limit=50&access_token=${mapboxgl.accessToken}`;
+    
+                try {
+                    const response = await fetch(query);
+                    const data = await response.json();
+    
+                    // Filtra e adiciona clínicas com "ocupacional" ou "trabalho" no nome
+                    data.features.forEach(feature => {
+                        const { geometry, text, place_name } = feature;
+    
+                        // Verifica se o nome da clínica contém "ocupacional" ou "trabalho" no texto ou no nome do local
+                        if (
+                            (text.toLowerCase().includes("ocupacional") || text.toLowerCase().includes("trabalho")) ||
+                            (place_name.toLowerCase().includes("ocupacional") || place_name.toLowerCase().includes("trabalho"))
+                        ) {
+                            // Adiciona o marcador azul para a clínica
+                            new mapboxgl.Marker({ color: 'blue' })
+                                .setLngLat(geometry.coordinates)
+                                .setPopup(
+                                    new mapboxgl.Popup().setHTML(
+                                        `<h3>${text}</h3><p>${place_name}</p>`
+                                    )
+                                )
+                                .addTo(map);
+                        }
+                    });
+                } catch (error) {
+                    console.error('Erro ao buscar clínicas:', error);
+                }
+            }
+    
+            // Obtém a localização do usuário e inicializa o mapa
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const userLocation = [position.coords.longitude, position.coords.latitude];
+                    initializeMap(userLocation);
+                },
+                error => {
+                    alert('Não foi possível obter sua localização. Usando posição padrão.');
+                    const defaultLocation = [-46.6333, -23.5505]; // São Paulo
+                    initializeMap(defaultLocation);
+                },
+                { enableHighAccuracy: true }
+            );
+        </script>
+
+<div class="spacer"></div>
+
+    <div class="footer">
+    <footer class="footer-content">
+        <div class="logo-redes">
+            <div class="logo">
+                <img src="/assets/images/logohexamsorg.png" alt="Logo Examsorg" style="height: 50px;">
+            </div>
+            <div class="redes-sociais">
+            <a href="https://www.instagram.com" target="_blank" class="redesocial"><img src="/assets/images/logoinsta.png" alt="Instagram" class="icon"></a>
+            <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img src="/assets/images/logowhatsapp.png" alt="WhatsApp" class="icon"></a>
+            <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img src="/assets/images/logotiktok.png" alt="TikTok" class="icon"></a>
+            <a href="https://www.facebook.com" target="_blank" class="redesocial"><img src="/assets/images/logoface.png" alt="Facebook" class="icon"></a>
+            <a href="https://www.youtube.com" target="_blank" class="redesocial"><img src="/assets/images/logoyoutube.png" alt="YouTube" class="icon"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img src="/assets/images/logolinkedin.png" alt="LinkedIn" class="icon"></a>
+    </div>
+
+            <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+        </div>
+        <div class="info-contato">
+            <div class="entre-contato">
+                <p>
+                    <img src="/assets/images/telefone.png" alt="icon telefone" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                    <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                </p>
+                <p>
+                    <img src="/assets/images/email.png" alt="icon email" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                    <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com" class="link-email">contato@examsorg.com</a>
+                </p>
+            </div>
+            <div class= "enviar-email">
+                    <input type="email" class="input-email-footer" placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+            <button class="botao-enviar"> 
+            Enviar
+            </button>
+        </div>
+        </div>
+    
+        <div class="ultima-coluna">
+            <div class="certificados">
+                <div class="certificado-logos">
+                    <img src="/assets/images/siteseguro.png" alt="Site 100% siteseguro" style="height: 30px; padding-right: 15px;">
+                    <img src="/assets/images/fsccertificado.png" alt="Certificado FSC" style="height: 30px; padding-right: 10px;">
+                    <img src="/assets/images/certificadogoogle.png" alt="Certificado segurança by Google" style="height: 30px; padding-right: 10px;">
+                </div>
+            </div>
+            <div class="pagamento-logos">
+                <p class="text-pagamento">Formas de Pagamento:</p>
+                <img src="/assets/images/logovisa.png" alt="Visa" style="height: 25px;">
+                <img src="/assets/images/logomastercard.png" alt="Mastercard" style="height: 25px;">
+                <img src="/assets/images/logopaypal.png" alt="PayPal" style="height: 25px;">
+                <img src="/assets/images/logodiscover.png" alt="Discover" style="height: 25px;">
+                <img src="/assets/images/logoelo.png" alt="Elo" style="height: 25px;">
+                <img src="/assets/images/logopix.png" alt="Pix" style="height: 25px;">
+                <img src="/assets/images/logoboletoo.png" alt="Boleto" style="height: 25px;">
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <p class="copyright">© 2024 EXAMSORG®. Todos os direitos reservados. CNPJ: 12.345.678/0001-90.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

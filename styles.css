@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDEBCC;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+    height: 120px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 40px;
+}
+
+.botao-sair {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    color: #0BBD29;
+    border: 2px solid #0BBD29;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+}
+.botao-sair:hover {
+    background-color: #252525; 
+    color: #0BBD29;
+    font-weight: 700; 
+    font-size: 18px; 
+    padding: 0 15px; 
+}
+.seta {
+    height: 15px; 
+    transition: stroke-width 0.3s ease; 
+    stroke-width: 3px; 
+    color:#0BBD29
+}
+img {
+    height: 80px;
+}
+
+.botao-agendar {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    color: #0F954C;
+    border: 2px solid #0F954C;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s;
+}
+
+.botao-agendar:hover {
+    background-color: #252525;
+    color: #0F954C;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.seta {
+    height: 15px;
+    transition: stroke-width 0.3s ease;
+    stroke-width: 3px;
+    stroke: #0F954C;
+}
+
+
+.image-text p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.text-below-carousel {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    height: 250px;
+    width: 100%;
+    padding: 50px 20px;
+    margin-left: 0;
+    margin-right: 0%;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.logo {
+    color: #fff; 
+    flex: 1; 
+    text-align: left; 
+    margin-bottom: 30px;
+}
+
+.logo-redes {
+    padding-right: 10px;
+    margin-bottom: 20;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+.redes-sociais{
+    margin: 5px; 
+    margin-left: 0%;
+    row-gap:var(#0BBD29);
+    margin-bottom: 20px;
+}
+
+.redes-sociais {
+    display: flex; 
+    gap: 10px; 
+}
+
+.icon {
+    height: 30px; 
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.redesocial:hover .icon {
+    transform: scale(1.2); 
+    filter: drop-shadow(0 0 5px #0BBD29); 
+}
+
+
+.info-contato {
+    color: #fff; 
+    flex: 1;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.input-email-footer {
+    max-width: 70%;
+    margin-top: 5%;
+    padding: 12px; 
+    border-radius: 10px; 
+    border: 1px solid #ccc; 
+}
+
+.enviar-email {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.botao-enviar {
+    min-width: 80px;
+    margin-top: 5%;
+    background-color: #0BBD29; 
+    color: #252525; 
+    border: 2px solid #0BBD29;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 550;
+    font-size: 15px; 
+    min-height: 50px;
+    padding: 12px 20px;
+}
+
+.botao-enviar:hover {
+    background-color: #DDEBCC;
+    color: #252525;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.ultima-coluna {
+    color: #fff; 
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    width: 100%;
+    align-items: end;
+    margin-right: 2%;
+    margin-left: 15%
+}
+
+.space-icontato {
+    padding-right: 3px;
+}
+
+.contatos-label {
+    color: #0BBD29; 
+    font-weight: 400; 
+}
+
+.link-email {
+    color:#fff;
+    font-weight: 300;
+}
+
+.link-politica {
+    color:#fff;
+    font-weight: 300;
+    font-size: 15px; 
+}
+
+.input-email {
+    margin-top: 0px;
+    padding: 5px;
+    border: none; 
+    border-radius: 5px;
+}
+
+.certificados {
+    margin-bottom: 57px;
+}
+
+.text-pagamento{
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: 102%;
+    padding: 10px;
+    font-size: 12px;
+}
+
+
+#map {
+    width: 80%;
+    height: 100vh;
+}
