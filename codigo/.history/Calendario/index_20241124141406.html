@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Agendamentos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #003d5c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            background-color: #005a8e;
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            color: white;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #003d5c;
+            color: white;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .status {
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .status.pendente {
+            color: white;
+            background-color: #f39c12;
+        }
+
+        .status.concluido {
+            color: white;
+            background-color: #2ecc71;
+        }
+
+        .status.cancelado {
+            color: white;
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Controle de Agendamentos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Cadastro</li>
+            <li>Consulta</li>
+            <li>Exames</li>
+            <li>Relatórios</li>
+            <li>Dashboard</li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Controle de Agendamentos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Idade</th>
+                    <th>Data do Agendamento</th>
+                    <th>Horário</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-data">
+                <!-- Os dados serão adicionados dinamicamente aqui -->
+            </tbody>
+        </table>
+    </main>
+    <script>
+        // Dados simulados para preencher a tabela
+        const scheduleData = [
+            {
+                item: 1,
+                nome: "João Silva",
+                cpf: "123.456.789-00",
+                idade: 29,
+                data: "25/11/2024",
+                horario: "08:30",
+                status: "Pendente",
+            },
+            {
+                item: 2,
+                nome: "Maria Oliveira",
+                cpf: "987.654.321-11",
+                idade: 34,
+                data: "26/11/2024",
+                horario: "10:00",
+                status: "Concluído",
+            },
+            {
+                item: 3,
+                nome: "Carlos Souza",
+                cpf: "321.654.987-22",
+                idade: 40,
+                data: "27/11/2024",
+                horario: "14:00",
+                status: "Cancelado",
+            },
+        ];
+
+        // Função para popular a tabela
+        function populateTable() {
+            const tableBody = document.getElementById("schedule-data");
+            scheduleData.forEach((entry) => {
+                const row = document.createElement("tr");
+
+                Object.values(entry).forEach((value, index) => {
+                    const cell = document.createElement("td");
+                    if (index === 5) {
+                        cell.innerHTML = `<span class="status ${entry.status.toLowerCase()}">${value}</span>`;
+                    } else {
+                        cell.textContent = value;
+                    }
+                    row.appendChild(cell);
+                });
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Chama a função ao carregar a página
+        populateTable();
+    </script>
+</body>
+</html>

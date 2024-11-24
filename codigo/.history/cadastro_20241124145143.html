@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="style.css"> <!--ref-CSS -->
+    <link rel="icon" href="assets/teste.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* tentei aplicar mas nao funcionou (bordas) */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border: 2px solid #0E4434; /* cor da borda */
+    border-radius: 5px; /* comando para arredondar os cantos */
+    padding: 8px; /* espaço interno */
+    outline: none; /* remove o contorno padrão ao focar */
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+
+textarea:focus {
+    border-color: #0E4434; /* cor da borda */
+    box-shadow: 0 0 5px rgba(0, 95, 163, 0.5); /* sombra */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #DDEBCC;
+}
+/* Cabeçalho */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+            height: 120px;
+            width: 100%;
+            padding: 0 20px;
+            position: fixed;
+}
+
+.botao-sair {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    color: #0BBD29;
+    border: 2px solid #0BBD29;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+}
+.botao-sair:hover {
+    background-color: #252525; 
+    color: #0BBD29;
+    font-weight: 700; 
+    font-size: 18px; 
+    padding: 0 15px; 
+}
+.seta {
+    height: 15px; 
+    transition: stroke-width 0.3s ease; 
+    stroke-width: 3px; 
+}
+.botao-sair:hover .seta {
+    stroke-width: 5px; 
+}
+.content {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0px; 
+    width: 100%;
+}
+h1 {
+    font-size: 24px; 
+    font-weight: bold;
+    text-align: center; 
+}
+.container-centralizado {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px; 
+    width: 100%;
+}
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+h5 {
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    text-align: left; 
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.header .logo img {
+    height: 60px;
+    width: auto;
+}
+
+.header .logo h1 {
+    font-size: 1.5em;
+    color: #DDEBCC;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #DDEBCC;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #0BBD29;
+}
+
+/* Estilo da seção de formulário */
+.main-content {
+    padding-top: 140px; /* Adiciona espaço suficiente para caber o cabecalho */
+    background-color: #DDEBCC;
+}
+
+
+.form-section, .table-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #DDEBCC;
+    color: #252525;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.form-container {
+    background-color: #DDEBCC;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Botão */
+.botao-container {
+    text-align: center; /* Centraliza o texto e os botões */
+    margin-top: 20px; /* Espaçamento acima do contêiner */
+}
+
+button {
+    background-color: #84CD7A;
+    color: #000000;
+    padding: 10px 15px;
+    border: 2px solid #252525;
+    border-radius: 20px; /* Torna o botão redondo */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    margin: 0 10px; /* Espaçamento horizontal entre os botões */
+}
+
+button:hover {
+    background-color: #252525; 
+    color: #0BBD29; 
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29; 
+    border: 1px solid #252525; 
+}
+
+
+/* Tabela de funcionários */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px;
+    text-align: left;
+    background-color: #d4f7d0;
+    color: #252525;
+    border-radius: 8px;
+    
+}
+
+.styled-table th {
+    background-color: #2abe43;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    height: 250px;
+    width: 100%;
+    padding: 50px 20px;
+    margin-left: 0;
+    margin-right: 0%;
+    position: relative;
+    z-index: 1;
+
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.logo {
+    color: #fff; 
+            flex: 1; 
+            text-align: left; 
+            margin-bottom: 0px;
+}
+.logo-redes {
+    padding-right: 10px;
+    margin-bottom: 20;
+    margin-left: 2%;
+}
+
+.redes-sociais{
+    margin: 5px; 
+    margin-left: 0%;
+    row-gap:var(#0BBD29);
+    margin-bottom: 20px;
+}
+.redesocial{
+    padding-right: 10px;
+}
+
+.info-contato {
+    color: #fff;
+    flex: 1; 
+    text-align: left;
+    padding-left: 25%;
+
+    /*justify-items: ;*/
+}
+
+.input-email-footer { 
+    max-width: 70%;
+    margin-top: 20px;
+}
+
+.ultima-coluna {
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    width: 100%;
+    align-items: end;
+}
+
+.space-icontato {
+    padding-right: 3px;
+}
+
+.contatos-label {
+    color: #0BBD29;
+    font-weight: 400; 
+    
+}
+.link-email {
+    color:#fff;
+    font-weight: 300;
+}
+.link-politica {
+    color:#fff;
+    font-weight: 300;
+    font-size: 15px; 
+}
+
+.input-email {
+    margin-top: 0px;
+    padding: 5px; 
+    border: none;
+    border-radius: 5px;
+}
+.certificados {
+    margin-bottom: 57px;
+}
+.text-pagamento{
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: 102%;
+    padding: 10px;
+    font-size: 12px;
+
+}
+</style>
+<body>
+    <!--INICIO DO CABECALHO-->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logohexamsorg.png" alt="Logo" /> <!-- LOGO PADRAO -->
+        </div>
+        <div>
+          <button class="botao-sair">
+              Voltar 
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0BBD29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta">
+                  <polyline points="15 18 9 12 15 6"> </polyline>
+              </svg>
+          </button>
+      </div>
+    </header>
+
+    <!--PAGINA DE CADASTRO-->
+    <main class="main-content">
+        <section class="form-section">
+            <h2>Cadastro de Funcionários</h2>
+            <p>Preencha os dados abaixo para cadastrar um novo funcionário no sistema.</p>
+            
+            <div class="form-container">
+                <form id="cadastro-form" class="form-style">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text"class="input-nome-funcionario" placeholder="Digite o nome do funcionário"  id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number"class="input-nome-funcionario" placeholder="Digite a idade do funcionário" id="idade" name="idade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text"class="input-nome-funcionario" placeholder="Ex: 000.000.000-00" id="cpf" name="cpf" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data-consulta">Data da Consulta:</label>
+                        <input type="date" id="data-consulta" name="data-consulta" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" class="input-telefone" placeholder="(31) 9 3385 - 1089" id="telefone" name="telefone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email"class="input-email" placeholder="exemplo@dominio.com" id="email" name="email" required>
+                    </div>
+
+                    <button type="button" onclick="adicionarUsuario()">Cadastrar Funcionário</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- exibir funcionarios -->
+        <section class="table-section">
+            <h2>Lista de Funcionários</h2>
+            <table id="tabela-usuarios" class="styled-table">
+                <thead>
+                 <tr>
+            <th>Nome</th>
+                <th>Idade</th>
+                 <th>CPF</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+        <th>Data</th>
+        <th>Horário</th>
+        <th>Observações</th>
+                 </tr>
+                </thead>
+                <tbody>
+                    <!-- tela de cadastrados -->
+                </tbody>
+            </table>
+
+            
+            <!-- exportar e importar csv-->
+            <div class="botao-container">
+              <button onclick="exportarParaCSV()">Exportar Planilha</button>
+              <button onclick="document.getElementById('importar-csv').click();">Importar Planilha</button>
+              <input type="file" id="importar-csv" accept=".csv" onchange="importarCSV()" style="display: none;">
+            </div>
+        </section>
+    </main>
+    <div class="botao-container">
+        <button type="button" onclick="irParaProximaPagina()">Continuar</button>
+    </div>
+    
+
+    <!-- Footer -->
+    <div class="footer">
+      <footer class="footer-content">
+          <div class="logo-redes">
+              <div class="logo">
+                  <img src="assets/logohexamsorg.png" alt="Logo Examsorg" style="height: 50px;">
+              </div>
+              <div class="redes-sociais">
+                  <a href="https://www.instagram.com" target="_blank" class="redesocial"><img src="assets/logoinsta.svg" alt="Instagram" style="height: 30px;"></a>
+                  <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img src="assets/logowhatsapp.svg" alt="WhatsApp" style="height: 30px;"></a>
+                  <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img src="assets/logotiktok.svg" alt="TikTok" style="height: 30px;"></a>
+                  <a href="https://www.facebook.com" target="_blank" class="redesocial"><img src="assets/logoface.svg" alt="Facebook" style="height: 30px;"></a>
+                  <a href="https://www.youtube.com" target="_blank" class="redesocial"><img src="assets/logoyoutube.svg" alt="LinkedIn" style="height: 30px;"></a>
+                  <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img src="assets/logolinkedin.svg" alt="LinkedIn" style="height: 30px;"></a>
+              </div>
+              <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+          </div>
+          <div class="info-contato">
+              <div class="entre-contato">
+                  <p>
+                      <img src="assets/telefone.svg" alt="icon telefone" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                      <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                  </p>
+                  <p>
+                      <img src="assets/email.svg" alt="icon email" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                      <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com" class="link-email">contato@examsorg.com</a>
+                  </p>
+              </div>
+                  <input type="email" class="input-email-footer" placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+          </div>
+          
+          <div class="ultima-coluna">
+              <div class="certificados">
+                  <div class="certificado-logos">
+                      <img src="assets/siteseguro.svg" alt="Site 100% siteseguro" style="height: 30px; padding-right: 15px;">
+                      <img src="assets/fsccertificado.svg" alt="Certificado FSC" style="height: 30px; padding-right: 10px;">
+                      <img src="assets/certificadogoogle.svg" alt="Certificado segurança by Google" style="height: 30px; padding-right: 10px;">
+                  </div>
+              </div>
+              <div class="pagamento-logos">
+                  <p class="assets/text-pagamento">Formas de Pagamento:</p>
+                  <img src="assets/logovisa.svg" alt="Visa" style="height: 25px;">
+                  <img src="assets/logomastercard.svg" alt="Mastercard" style="height: 25px;">
+                  <img src="assets/logopaypal.svg" alt="PayPal" style="height: 25px;">
+                  <img src="assets/logodiscover.svg" alt="Discover" style="height: 25px;">
+                  <img src="assets/logoelo.svg" alt="Elo" style="height: 25px;">
+                  <img src="assets/logopix.svg" alt="Pix" style="height: 25px;">
+                  <img src="assets/logoboletoo.svg" alt="Boleto" style="height: 25px;">
+              </div>
+          </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

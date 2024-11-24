@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             previouslySelected.style.backgroundColor = ""; // Remove destaque anterior
         }
         element.classList.add("selected");
-        element.style.backgroundColor = "#0BBD29"; // Destacar o horário selecionado
+        element.style.backgroundColor = "#d1e7dd"; // Destacar o horário selecionado
     };
 
     // Agendar e adicionar à tabela

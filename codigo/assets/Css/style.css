@@ -1,0 +1,376 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* tentei aplicar mas nao funcionou (bordas) */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border: 2px solid #0E4434; /* cor da borda */
+    border-radius: 5px; /* comando para arredondar os cantos */
+    padding: 8px; /* espaço interno */
+    outline: none; /* remove o contorno padrão ao focar */
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+
+textarea:focus {
+    border-color: #0E4434; /* cor da borda */
+    box-shadow: 0 0 5px rgba(0, 95, 163, 0.5); /* sombra */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #DDEBCC;
+}
+/* Cabeçalho */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+            height: 120px;
+            width: 100%;
+            padding: 0 20px;
+            position: fixed;
+}
+
+.botao-sair {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    color: #0BBD29;
+    border: 2px solid #0BBD29;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+}
+.botao-sair:hover {
+    background-color: #252525; 
+    color: #0BBD29;
+    font-weight: 700; 
+    font-size: 18px; 
+    padding: 0 15px; 
+}
+.seta {
+    height: 15px; 
+    transition: stroke-width 0.3s ease; 
+    stroke-width: 3px; 
+}
+.botao-sair:hover .seta {
+    stroke-width: 5px; 
+}
+.content {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0px; 
+    width: 100%;
+}
+h1 {
+    font-size: 24px; 
+    font-weight: bold;
+    text-align: center; 
+}
+.container-centralizado {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px; 
+    width: 100%;
+}
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+h5 {
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    text-align: left; 
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.header .logo img {
+    height: 60px;
+    width: auto;
+}
+
+.header .logo h1 {
+    font-size: 1.5em;
+    color: #DDEBCC;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #DDEBCC;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #0BBD29;
+}
+
+/* Estilo da seção de formulário */
+.main-content {
+    padding-top: 140px; /* Adiciona espaço suficiente para caber o cabecalho */
+    background-color: #DDEBCC;
+}
+
+
+.form-section, .table-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #DDEBCC;
+    color: #252525;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.form-container {
+    background-color: #DDEBCC;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Botão */
+.botao-container {
+    text-align: center; /* Centraliza o texto e os botões */
+    margin-top: 20px; /* Espaçamento acima do contêiner */
+}
+
+button {
+    background-color: #84CD7A;
+    color: #000000;
+    padding: 10px 15px;
+    border: 2px solid #252525;
+    border-radius: 20px; /* Torna o botão redondo */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    margin: 0 10px; /* Espaçamento horizontal entre os botões */
+}
+
+button:hover {
+    background-color: #252525; 
+    color: #0BBD29; 
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29; 
+    border: 1px solid #252525; 
+}
+
+
+/* Tabela de funcionários */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px;
+    text-align: left;
+    background-color: #d4f7d0;
+    color: #252525;
+    border-radius: 8px;
+    
+}
+
+.styled-table th {
+    background-color: #2abe43;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    height: 250px;
+    width: 100%;
+    padding: 50px 20px;
+    margin-left: 0;
+    margin-right: 0%;
+    position: relative;
+    z-index: 1;
+
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.logo {
+    color: #fff; 
+            flex: 1; 
+            text-align: left; 
+            margin-bottom: 0px;
+}
+.logo-redes {
+    padding-right: 10px;
+    margin-bottom: 20;
+    margin-left: 2%;
+}
+
+.redes-sociais{
+    margin: 5px; 
+    margin-left: 0%;
+    row-gap:var(#0BBD29);
+    margin-bottom: 20px;
+}
+.redesocial{
+    padding-right: 10px;
+}
+
+.info-contato {
+    color: #fff;
+    flex: 1; 
+    text-align: left;
+    padding-left: 25%;
+
+    /*justify-items: ;*/
+}
+
+.input-email-footer { 
+    max-width: 70%;
+    margin-top: 20px;
+}
+
+.ultima-coluna {
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    width: 100%;
+    align-items: end;
+}
+
+.space-icontato {
+    padding-right: 3px;
+}
+
+.contatos-label {
+    color: #0BBD29;
+    font-weight: 400; 
+    
+}
+.link-email {
+    color:#fff;
+    font-weight: 300;
+}
+.link-politica {
+    color:#fff;
+    font-weight: 300;
+    font-size: 15px; 
+}
+
+.input-email {
+    margin-top: 0px;
+    padding: 5px; 
+    border: none;
+    border-radius: 5px;
+}
+.certificados {
+    margin-bottom: 57px;
+}
+.text-pagamento{
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: 102%;
+    padding: 10px;
+    font-size: 12px;
+    #timeSlots li {
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#timeSlots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre os horários */
+    justify-content: center;
+    padding: 10px;
+}
+
+#timeSlots li {
+    list-style-type: none;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 20px; /* Bordas arredondadas */
+    text-align: center;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#timeSlots li:hover {
+    background-color: #e2e6ea;
+    border-color: #a2d9ce; /* Muda a borda ao passar o mouse */
+}
+
+#timeSlots li.selected {
+    background-color: #d1e7dd; /* Cor do item selecionado */
+    border-color: #28a745; /* Borda verde para o selecionado */
+    font-weight: bold;
+}
+
+
+}

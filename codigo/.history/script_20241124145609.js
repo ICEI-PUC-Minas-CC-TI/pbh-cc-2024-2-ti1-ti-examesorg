@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedDate = document.getElementById("selectedDate");
     const notes = document.getElementById("notes");
 
-    // Horários disponíveis
     const availableSlots = [
         "08:00", "09:00", "10:00", "11:00",
         "13:00", "14:00", "15:00", "16:00"
     ];
 
-    // Exibir os horários disponíveis
+    // Exibir os horários disponíveis ao abrir o calendário
     window.showCalendar = () => {
         calendar.style.display = "block";
         populateTimeSlots(availableSlots);
@@ -18,11 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Preencher os horários disponíveis
     const populateTimeSlots = (slots) => {
-        timeSlots.innerHTML = ""; // Limpa os horários
+        timeSlots.innerHTML = ""; // Limpa os horários anteriores
         slots.forEach(slot => {
             const li = document.createElement("li");
             li.textContent = slot;
-            li.style.cursor = "pointer"; // Indica que o elemento é clicável
             li.onclick = () => selectTimeSlot(li);
             timeSlots.appendChild(li);
         });
@@ -33,10 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const previouslySelected = document.querySelector("#timeSlots .selected");
         if (previouslySelected) {
             previouslySelected.classList.remove("selected");
-            previouslySelected.style.backgroundColor = ""; // Remove destaque anterior
         }
         element.classList.add("selected");
-        element.style.backgroundColor = "#0BBD29"; // Destacar o horário selecionado
     };
 
     // Agendar e adicionar à tabela
@@ -61,12 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const cpf = document.getElementById("cpf").value;
         const telefone = document.getElementById("telefone").value;
         const email = document.getElementById("email").value;
-
-        // Verificar se os campos principais estão preenchidos
-        if (!nome || !idade || !cpf || !telefone || !email) {
-            alert("Por favor, preencha todos os campos do formulário.");
-            return;
-        }
 
         // Adicionar dados à tabela
         const tabela = document.getElementById("tabela-usuarios").getElementsByTagName("tbody")[0];

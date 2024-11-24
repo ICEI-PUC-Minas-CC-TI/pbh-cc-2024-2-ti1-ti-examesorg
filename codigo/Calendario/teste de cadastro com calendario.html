@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Agendamentos</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eafbe7;
+            color: #333;
+        }
+
+        header {
+            background-color: #2ecc71;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #27ae60;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Estilos do Formulário */
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #1e8449;
+        }
+
+        /* Estilos do Calendário */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .calendar-header button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .calendar-header button:hover {
+            background-color: #1e8449;
+        }
+
+        .calendar-day {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .calendar-day:hover {
+            background-color: #d4f5d1;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Agendamentos</h1>
+    </header>
+    <nav>
+        <a href="#" id="home-link">Início</a>
+        <a href="#" id="cadastro-link">Cadastro</a>
+    </nav>
+    <div class="container" id="main-container">
+        <!-- Conteúdo inicial -->
+        <h2 class="section-title">Bem-vindo ao Sistema de Agendamentos</h2>
+        <p>Escolha uma opção no menu acima para começar.</p>
+    </div>
+    <footer>
+        &copy; 2024 Sistema de Agendamentos
+    </footer>
+
+    <script>
+        const mainContainer = document.getElementById('main-container');
+        const homeLink = document.getElementById('home-link');
+        const cadastroLink = document.getElementById('cadastro-link');
+
+        let agendamentos = {}; // Objeto para armazenar os agendamentos
+
+        // Função para exibir a tela inicial
+        function exibirInicio() {
+            mainContainer.innerHTML = `
+                <h2 class="section-title">Bem-vindo ao Sistema de Agendamentos</h2>
+                <p>Escolha uma opção no menu acima para começar.</p>
+            `;
+        }
+
+        // Função para exibir a tela de Cadastro
+        function exibirCadastro() {
+            mainContainer.innerHTML = `
+                <h2 class="section-title">Cadastro</h2>
+                <form id="form-cadastro">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite o nome do funcionário" required>
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" placeholder="Digite o CPF" required>
+
+                    <label for="data">Data de Agendamento:</label>
+                    <input type="date" id="data" required>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+                <h2 class="section-title">Calendário</h2>
+                <div id="calendar-container"></div>
+            `;
+
+            const formCadastro = document.getElementById('form-cadastro');
+            const calendarContainer = document.getElementById('calendar-container');
+
+            formCadastro.onsubmit = (e) => {
+                e.preventDefault();
+                const nome = document.getElementById('nome').value;
+                const cpf = document.getElementById('cpf').value;
+                const data = document.getElementById('data').value;
+
+                if (!agendamentos[data]) {
+                    agendamentos[data] = [];
+                }
+                agendamentos[data].push({ nome, cpf });
+
+                alert(`Funcionário ${nome} cadastrado no dia ${data}!`);
+                renderizarCalendario();
+            };
+
+            function renderizarCalendario() {
+                const today = new Date();
+                const currentMonth = today.getMonth();
+                const currentYear = today.getFullYear();
+
+                calendarContainer.innerHTML = `
+                    <div class="calendar-header">
+                        <h3>${new Date(currentYear, currentMonth).toLocaleString('pt-BR', {
+                            month: 'long',
+                            year: 'numeric'
+                        })}</h3>
+                    </div>
+                    <div class="calendar">
+                        ${['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
+                            .map(day => `<div><strong>${day}</strong></div>`)
+                            .join('')}
+                    </div>
+                `;
+                // Gerar os dias do calendário
+            }
+
+            renderizarCalendario();
+        }
+
+        // Navegação
+        homeLink.onclick = exibirInicio;
+        cadastroLink.onclick = exibirCadastro;
+
+        // Exibe a tela inicial por padrão
+        exibirInicio();
+    </script>
+</body>
+</html>

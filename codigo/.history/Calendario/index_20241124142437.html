@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Agendamentos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav button {
+            background-color: #005a8e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #004970;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #003d5c;
+            color: white;
+        }
+
+        .form-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .form-group button:hover {
+            background-color: #27ae60;
+        }
+
+        #import-button {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #calendar {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #calendar table {
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+
+        #calendar td {
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+
+        #calendar td:hover {
+            background-color: #f0f0f0;
+        }
+
+        #calendar td.selected {
+            background-color: #2ecc71;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Controle de Agendamentos</h1>
+        <nav>
+            <button id="btn-tabela">Visualizar Tabela</button>
+            <button id="btn-cadastro">Cadastrar</button>
+        </nav>
+
+        <div id="tabela-container">
+            <h2>Controle de Agendamentos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Idade</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-dados">
+                    <!-- Dados inseridos dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="cadastro-container" class="hidden">
+            <h2>Cadastrar Agendamento</h2>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite o nome">
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" placeholder="Digite o CPF">
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" placeholder="Digite a idade">
+            </div>
+            <div class="form-group">
+                <label>Selecione a Data:</label>
+                <div id="calendar">
+                    <!-- Calendário gerado dinamicamente -->
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario">
+            </div>
+            <button id="salvar">Salvar Agendamento</button>
+            <div>
+                <label for="import-button">Importar Dados de Planilha (Excel):</label>
+                <input type="file" id="import-button" accept=".json">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabelaContainer = document.getElementById("tabela-container");
+        const cadastroContainer = document.getElementById("cadastro-container");
+        const btnTabela = document.getElementById("btn-tabela");
+        const btnCadastro = document.getElementById("btn-cadastro");
+        const tabelaDados = document.getElementById("tabela-dados");
+        const calendar = document.getElementById("calendar");
+        const importButton = document.getElementById("import-button");
+
+        let agendamentos = [];
+
+        // Alternar entre visualização da tabela e cadastro
+        btnTabela.addEventListener("click", () => {
+            cadastroContainer.classList.add("hidden");
+            tabelaContainer.classList.remove("hidden");
+        });
+
+        btnCadastro.addEventListener("click", () => {
+            tabelaContainer.classList.add("hidden");
+            cadastroContainer.classList.remove("hidden");
+        });
+
+        // Criar calendário simples
+        function criarCalendario() {
+            const dias = 30;
+            const tabela = document.createElement("table");
+            const linha = document.createElement("tr");
+
+            for (let i = 1; i <= dias; i++) {
+                const celula = document.createElement("td");
+                celula.textContent = i;
+                celula.addEventListener("click", () => {
+                    document.querySelectorAll("#calendar td").forEach(td => td.classList.remove("selected"));
+                    celula.classList.add("selected");
+                });
+                linha.appendChild(celula);
+                if (i % 7 === 0) {
+                    tabela.appendChild(linha.cloneNode(true));
+                    linha.innerHTML = "";
+                }
+            }
+            tabela.appendChild(linha);
+            calendar.appendChild(tabela);
+        }
+
+        criarCalendario();
+
+        // Salvar agendamento
+        document.getElementById("salvar").addEventListener("click", () => {
+            const nome = document.getElementById("nome").value;
+            const cpf = document.getElementById("cpf").value;
+            const idade = document.getElementById("idade").value;
+            const horario = document.getElementById("horario").value;
+            const data = document.querySelector("#calendar td.selected")?.textContent || "Não selecionada";
+
+            if (nome && cpf && idade && horario && data !== "Não selecionada") {
+                agendamentos.push({ nome, cpf, idade, data, horario });
+                tabelaDados.innerHTML += `
+                    <tr>
+                        <td>${agendamentos.length}</td>
+                        <td>${nome}</td>
+                        <td>${cpf}</td>
+                        <td>${idade}</td>
+                        <td>${data}</td>
+                        <td>${horario}</td>
+                    </tr>
+                `;
+                alert("Agendamento salvo com sucesso!");
+            } else {
+                alert("Preencha todos os campos!");
+            }
+        });
+
+        // Importar dados JSON
+        importButton.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = () => {
+                const importedData = JSON.parse(reader.result);
+                importedData.forEach((item, index) => {
+                    tabelaDados.innerHTML += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${item.nome}</td>
+                            <td>${item.cpf}</td>
+                            <td>${item.idade}</td>
+                            <td>${item.data}</td>
+                            <td>${item.horario}</td>
+                        </tr>
+                    `;
+                });
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>

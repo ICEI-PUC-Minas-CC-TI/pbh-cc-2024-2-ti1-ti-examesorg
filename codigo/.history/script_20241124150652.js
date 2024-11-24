@@ -16,28 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
         populateTimeSlots(availableSlots);
     };
 
-    // Preencher os horários disponíveis
-    const populateTimeSlots = (slots) => {
-        timeSlots.innerHTML = ""; // Limpa os horários
-        slots.forEach(slot => {
-            const li = document.createElement("li");
-            li.textContent = slot;
-            li.style.cursor = "pointer"; // Indica que o elemento é clicável
-            li.onclick = () => selectTimeSlot(li);
-            timeSlots.appendChild(li);
-        });
-    };
+   // Preencher os horários disponíveis
+const populateTimeSlots = (slots) => {
+    timeSlots.innerHTML = ""; // Limpa os horários
+    slots.forEach(slot => {
+        const li = document.createElement("li");
+        li.textContent = slot;
+        li.onclick = () => selectTimeSlot(li);
+        timeSlots.appendChild(li);
+    });
+};
 
-    // Selecionar um horário
-    const selectTimeSlot = (element) => {
-        const previouslySelected = document.querySelector("#timeSlots .selected");
-        if (previouslySelected) {
-            previouslySelected.classList.remove("selected");
-            previouslySelected.style.backgroundColor = ""; // Remove destaque anterior
-        }
-        element.classList.add("selected");
-        element.style.backgroundColor = "#0BBD29"; // Destacar o horário selecionado
-    };
+// Selecionar um horário
+const selectTimeSlot = (element) => {
+    const previouslySelected = document.querySelector("#timeSlots .selected");
+    if (previouslySelected) {
+        previouslySelected.classList.remove("selected");
+    }
+    element.classList.add("selected");
+};
+            
 
     // Agendar e adicionar à tabela
     window.scheduleAppointment = () => {

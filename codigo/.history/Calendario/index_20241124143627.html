@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Agendamentos</title>
+    <style>
+        /* Layout geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eafbe7;
+            color: #333;
+        }
+
+        header {
+            background-color: #2ecc71;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #27ae60;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Estilo do calendário */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .calendar-header button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .calendar-header button:hover {
+            background-color: #1e8449;
+        }
+
+        .calendar-day {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .calendar-day:hover {
+            background-color: #d4f5d1;
+        }
+
+        /* Sessão de pessoas cadastradas */
+        .week-schedule {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .day-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .day-box h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .day-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Agendamentos</h1>
+    </header>
+    <nav>
+        <a href="#" id="calendar-link">Calendário</a>
+        <a href="#" id="cadastro-link">Cadastro</a>
+    </nav>
+    <div class="container" id="main-container">
+        <!-- Conteúdo dinâmico aqui -->
+    </div>
+    <footer>
+        &copy; 2024 Sistema de Agendamentos
+    </footer>
+
+    <script>
+        const mainContainer = document.getElementById('main-container');
+        const calendarLink = document.getElementById('calendar-link');
+        const cadastroLink = document.getElementById('cadastro-link');
+
+        let agendamentos = {}; // Objeto para armazenar os agendamentos
+
+        // Função para exibir o calendário
+        function exibirCalendario() {
+            const today = new Date();
+            let currentMonth = today.getMonth();
+            let currentYear = today.getFullYear();
+
+            function renderizarCalendario() {
+                mainContainer.innerHTML = `
+                    <h2 class="section-title">Calendário</h2>
+                    <div class="calendar-header">
+                        <button id="prev-month">Anterior</button>
+                        <h3>${new Date(currentYear, currentMonth).toLocaleString('pt-BR', {
+                            month: 'long',
+                            year: 'numeric'
+                        })}</h3>
+                        <button id="next-month">Próximo</button>
+                    </div>
+                    <div class="calendar">
+                        ${['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
+                            .map(day => `<div><strong>${day}</strong></div>`)
+                            .join('')}
+                    </div>
+                `;
+
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+
+                const calendar = mainContainer.querySelector('.calendar');
+                for (let i = 0; i < firstDay; i++) {
+                    calendar.innerHTML += `<div></div>`;
+                }
+
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = `${currentYear}-${currentMonth + 1}-${day}`;
+                    const dayContent = agendamentos[date]
+                        ? `<strong>${day}</strong><br>${agendamentos[date].join('<br>')}`
+                        : `<strong>${day}</strong>`;
+
+                    calendar.innerHTML += `<div class="calendar-day">${dayContent}</div>`;
+                }
+
+                document.getElementById('prev-month').onclick = () => {
+                    currentMonth--;
+                    if (currentMonth < 0) {
+                        currentMonth = 11;
+                        currentYear--;
+                    }
+                    renderizarCalendario();
+                };
+
+                document.getElementById('next-month').onclick = () => {
+                    currentMonth++;
+                    if (currentMonth > 11) {
+                        currentMonth = 0;
+                        currentYear++;
+                    }
+                    renderizarCalendario();
+                };
+            }
+
+            renderizarCalendario();
+        }
+
+        // Função para exibir pessoas cadastradas por dia da semana
+        function exibirPessoasCadastradas() {
+            mainContainer.innerHTML = `
+                <h2 class="section-title">Agendamentos por Dia da Semana</h2>
+                <div class="week-schedule">
+                    ${['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
+                        .map(day => `
+                            <div class="day-box">
+                                <h4>${day}</h4>
+                                <ul id="list-${day}"></ul>
+                            </div>
+                        `)
+                        .join('')}
+                </div>
+            `;
+
+            for (const [date, names] of Object.entries(agendamentos)) {
+                const weekDay = new Date(date).toLocaleString('pt-BR', { weekday: 'short' });
+                const list = document.getElementById(`list-${weekDay}`);
+                if (list) {
+                    list.innerHTML = names.map(name => `<li>${name}</li>`).join('');
+                }
+            }
+        }
+
+        // Função para exibir o cadastro
+        function exibirCadastro() {
+            mainContainer.innerHTML = `
+                <h2 class="section-title">Cadastro</h2>
+                <form id="form-cadastro">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            `;
+
+            document.getElementById('form-cadastro').onsubmit = (e) => {
+                e.preventDefault();
+                const nome = document.getElementById('nome').value;
+                const data = document.getElementById('data').value;
+
+                if (!agendamentos[data]) {
+                    agendamentos[data] = [];
+                }
+
+                agendamentos[data].push(nome);
+                alert(`Funcionário ${nome} cadastrado!`);
+                exibirPessoasCadastradas();
+            };
+        }
+
+        // Navegação
+        calendarLink.onclick = exibirCalendario;
+        cadastroLink.onclick = exibirCadastro;
+
+        // Exibe calendário por padrão
+        exibirCalendario();
+    </script>
+</body>
+</html>

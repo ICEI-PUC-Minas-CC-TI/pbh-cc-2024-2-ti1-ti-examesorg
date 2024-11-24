@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Agendamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.day {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.day.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#schedule {
+    margin: 20px;
+}
+
+#timeslots {
+    list-style-type: none;
+    padding: 0;
+}
+
+#timeslots li {
+    background-color: #f9f9f9;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#timeslots li:hover {
+    background-color: #e0e0e0;
+}
+
+#timeslots li.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<body>
+    <h1>Agendamento de Exames Periódicos</h1>
+    <div id="calendar"></div>
+    <div id="schedule">
+        <h2>Horários Disponíveis</h2>
+        <ul id="timeslots"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
