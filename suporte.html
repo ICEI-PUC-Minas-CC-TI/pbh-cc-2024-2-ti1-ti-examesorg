@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Exams Org</title>
+    <link rel="stylesheet" href="suporte.css">
+    <link rel="icon" href="icone verde pfundo_cinza.png" sizes="16x16" type="image/png">
+</head>
+<body>
+    <div class="titulo-container">
+        <h1 class="titulo-principal">Suporte via Chat</h1>
+    </div>
+    <div class="aviso">
+        Caso não consiga abrir o chat, limpe o cache e atualize a página.<br>
+        Pressione <strong>Ctrl + R</strong> e depois tecla <strong>F5</strong>.
+    </div>
+</body>
+    <header class="header">
+        <img src="logo principal pfundo_cinza.png" alt="Logo Exams Org" class="logo-header">
+        <nav>
+            <button class="botao-sair">
+                Voltar
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00FFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="cards">
+            <div class="card green">
+                <h2>First</h2>
+                <p>Horário de atendimento: de segunda à sexta-feira, das 8:00h às 19h.</p>
+                <button>Iniciar Chat</button>
+            </div>
+            <div class="card blue">
+                <h2>Vitrine</h2>
+                <p>Horário de atendimento: de segunda à sexta-feira, das 8:00h às 19h,<br>e aos sábados 9h às 15h.</p>
+                <button>Iniciar Chat</button>
+            </div>
+            <div class="card pink">
+                <h2>Serviços</h2>
+                <p>Horário de atendimento: de segunda à sexta-feira, das 8:00h às 19h.</p>
+                <button>Iniciar Chat</button>
+            </div>
+        </section>
+    </main>
+    <div class="chat-container">
+        <button class="chat-toggle">Abrir Suporte</button>
+        <div class="chat-box">
+            <div class="chat-header">Suporte</div>
+            <form id="chat-form" class="chat-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem" rows="4" required></textarea>
+                <button type="submit">Iniciar Chat</button>
+            </form>
+        </div>
+    </div>    
+    <div class="footer">
+        <footer class="footer-content">
+            <div class="logo-redes">
+                <div class="logo">
+                    <img src="logo principal pfundo_cinza.png" alt="Logo Examsorg" style="height: 50px;">
+                </div>
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com" target="_blank" class="redesocial"><img src="logoinsta.png" alt="Instagram" style="height: 30px;"></a>
+                    <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img src="logowhatsapp.png" alt="WhatsApp" style="height: 30px;"></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img src="logotiktok.png" alt="TikTok" style="height: 30px;"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="redesocial"><img src="logoface.png" alt="Facebook" style="height: 30px;"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="redesocial"><img src="logoyoutube.svg" alt="LinkedIn" style="height: 30px;"></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img src="logolinkedin.png" alt="LinkedIn" style="height: 30px;"></a>
+                </div>
+                <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+            </div>
+            <div class="info-contato">
+                <div class="entre-contato">
+                    <p>
+                        <img src="telefone.svg" alt="icon telefone" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                    </p>
+                    <p>
+                        <img src="email.svg" alt="icon email" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com" class="link-email">contato@examsorg.com</a>
+                    </p>
+                </div>
+                    <input type="email" class="input-email-footer" placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+            </div>
+            
+            <div class="ultima-coluna">
+                <div class="certificados">
+                    <div class="certificado-logos">
+                        <img src="siteseguro.svg" alt="Site 100% siteseguro" style="height: 30px; padding-right: 15px;">
+                        <img src="fsccertificado.svg" alt="Certificado FSC" style="height: 30px; padding-right: 10px;">
+                        <img src="certificadogoogle.svg" alt="Certificado segurança by Google" style="height: 30px; padding-right: 10px;">
+                    </div>
+                </div>
+                <div class="pagamento-logos">
+                    <p class="text-pagamento">Formas de Pagamento:</p>
+                    <img src="logovisa.svg" alt="Visa" style="height: 25px;">
+                    <img src="logomastercard.svg" alt="Mastercard" style="height: 25px;">
+                    <img src="logopaypal.svg" alt="PayPal" style="height: 25px;">
+                    <img src="logodiscover.svg" alt="Discover" style="height: 25px;">
+                    <img src="logoelo.svg" alt="Elo" style="height: 25px;">
+                    <img src="logopix.svg" alt="Pix" style="height: 25px;">
+                    <img src="logoboletoo.svg" alt="Boleto" style="height: 25px;">
+                </div>
+            </div>
+        </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    function handleScroll() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+
+            if (cardTop < triggerBottom) {
+                card.classList.add("active");
+            } else {
+                card.classList.remove("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+});
+const chatToggle = document.querySelector('.chat-toggle');
+    const chatBox = document.querySelector('.chat-box');
+
+    chatToggle.addEventListener('click', () => {
+        chatBox.classList.toggle('active'); 
+        chatToggle.textContent = chatBox.classList.contains('active') ? 'Fechar Suporte' : 'Abrir Suporte';
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    function handleScroll() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+
+            if (cardTop < triggerBottom) {
+                card.classList.add("active");
+            } else {
+                card.classList.remove("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    const chatToggle = document.querySelector('.chat-toggle');
+    const chatBox = document.querySelector('.chat-box');
+    const chatButtons = document.querySelectorAll('.card button'); 
+
+    chatToggle.addEventListener('click', () => {
+        chatBox.classList.toggle('active');
+        chatToggle.textContent = chatBox.classList.contains('active') ? 'Fechar Suporte' : 'Abrir Suporte';
+    });
+
+    chatButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            chatBox.classList.add('active'); 
+            chatToggle.textContent = 'Fechar Suporte'; 
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const chatForm = document.getElementById("chat-form");
+
+    chatForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(chatForm);
+        const nome = formData.get("Nome");
+        const email = formData.get("Email");
+        const mensagem = formData.get("Mensagem");
+        const linkWhatsApp = "https://wa.me/5531995737525";
+        window.location.href = linkWhatsApp;
+    });
+});
+
+
+    </script>
+</body>
+</html>
