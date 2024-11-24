@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos e Valores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="adm.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: #DDEBCC;">
+    <header>
+        <img src="assets/images/logohexamsorg.png" alt="Logo Exams Org">
+        <div>
+            <a href="other.html">
+                <button class="botao-sair">
+                    Voltar
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#0BBD29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta">
+                        <polyline points="15 18 9 12 15 6"> </polyline>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Planos e Valores</h1>
+
+        <!-- Selecaoo de planos -->
+        <div class="plano-container">
+            <div class="plano-content">
+                <img src="assets/images/plano-individual.png" alt="Plano Individual" class="plano-imagem"
+                    id="imagem-individual">
+                <button class="botao-plano" id="plano-individual">
+                    Plano Individual
+                </button>
+            </div>
+            <div class="descricao-plano" id="descricao-individual">
+                <h2>Plano Individual</h2>
+                <p>Este plano é ideal para indivíduos que desejam realizar exames periódicos. Com ele, você terá acesso
+                    a uma ampla gama de exames e serviços de saúde.</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="exame-6-meses-individual" name="exame" value="150">
+                        <label for="exame-6-meses-individual">Exame de 6 meses: R$ 150,00</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="exame-1-ano-individual" name="exame" value="250">
+                        <label for="exame-1-ano-individual">Exame de 1 ano: R$ 250,00</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="exame-2-anos-individual" name="exame" value="400">
+                        <label for="exame-2-anos-individual">Exame de 2 anos: R$ 400,00</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="plano-content">
+                <img src="assets/images/plano-empresarial.png" alt="Plano Empresarial" class="plano-imagem"
+                    id="imagem-empresarial">
+                <button class="botao-plano" id="plano-empresarial">
+                    Plano Empresarial
+                </button>
+            </div>
+            <div class="descricao-plano" id="descricao-empresarial">
+                <h2>Plano Empresarial</h2>
+                <p>Este plano é ideal para empresas que desejam realizar exames periódicos para seus funcionários. Com
+                    ele, você terá acesso a uma ampla gama de exames e serviços de saúde para seus funcionários.</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="exame-6-meses-empresarial" name="exame" value="100">
+                        <label for="exame-6-meses-empresarial">Exame de 6 meses: R$ 100,00 por funcionário</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="exame-1-ano-empresarial" name="exame" value="180">
+                        <label for="exame-1-ano-empresarial">Exame de 1 ano: R$ 180,00 por funcionário</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="exame-2-anos-empresarial" name="exame" value="300">
+                        <label for="exame-2-anos-empresarial">Exame de 2 anos: R$ 300,00 por funcionário</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="plano-content">
+                <img src="assets/images/plano-premium.png" alt="Plano Premium" class="plano-imagem" id="imagem-premium">
+                <button class="botao-plano" id="plano-premium">
+                    Plano Premium
+                </button>
+            </div>
+            <div class="descricao-plano" id="descricao-premium">
+                <h2>Plano Premium</h2>
+                <p>Este plano é ideal para indivíduos que desejam realizar exames periódicos com benefícios adicionais.
+                    Com ele, você terá acesso a uma ampla gama de exames e serviços de saúde, além de benefícios
+                    exclusivos.</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="exame-6-meses-premium" name="exame" value="300">
+                        <label for="exame-6-meses-premium">Exame de 6 meses: R$ 300,00</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="exame-1-ano-premium" name="exame" value="500">
+                        <label for="exame-1-ano-premium">Exame de 1 ano: R$ 500,00</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="exame-2-anos-premium" name="exame" value="800">
+                        <label for="exame-2-anos-premium">Exame de 2 anos: R$ 800,00</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="botao-comprar" id="botao-comprar" onclick="verificarSelecao()">
+                Comprar (R$ <span id="valor-comprar">0,00</span>)
+            </button>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+        <script>
+            const planoIndividual = document.getElementById('plano-individual');
+            const descricaoIndividual = document.getElementById('descricao-individual');
+            const imagemIndividual = document.getElementById('imagem-individual');
+            const planoEmpresarial = document.getElementById('plano-empresarial');
+            const descricaoEmpresarial = document.getElementById('descricao-empresarial');
+            const imagemEmpresarial = document.getElementById('imagem-empresarial');
+            const planoPremium = document.getElementById('plano-premium');
+            const descricaoPremium = document.getElementById('descricao-premium');
+            const imagemPremium = document.getElementById('imagem-premium');
+            const botaoComprar = document.getElementById('botao-comprar');
+            const valorComprar = document.getElementById('valor-comprar');
+        
+            let precoIndividual = [150, 250, 400]; // Preços base para 6 meses, 1 ano, 2 anos
+            let precoEmpresarial = [100, 180, 300]; // Preços base para 6 meses, 1 ano, 2 anos
+            let precoPremium = [300, 500, 800]; // Preços base para 6 meses, 1 ano, 2 anos
+        
+            let valorExameSelecionado = 0; // Variável para armazenar o valor do exame selecionado
+        
+            navigator.geolocation.getCurrentPosition(success, error);
+        
+            function success(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+        
+                // Use o Mapbox para obter o nome da região
+                const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxgl.accessToken}`;
+        
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        const region = getRegion(latitude, longitude);
+                        ajustarPrecos(region);
+                    })
+                    .catch(err => console.error('Erro ao buscar dados da API:', err));
+            }
+        
+            function error() {
+                console.error("Não foi possível obter a localização.");
+            }
+        
+            // Função para determinar a região do Brasil
+            function getRegion(latitude, longitude) {
+                if (latitude >= -5.0 && longitude >= -74.0 && longitude < -60.0) {
+                    return 'Norte'; // Região Norte
+                } else if (latitude >= -5.0 && longitude >= -60.0 && longitude < -34.0) {
+                    return 'Nordeste'; // Região Nordeste
+                } else if (latitude >= -15.0 && longitude >= -60.0 && longitude < -45.0) {
+                    return 'Centro-Oeste'; // Região Centro-Oeste
+                } else if (latitude >= -23.0 && longitude >= -50.0 && longitude < -34.0) {
+                    return 'Sudeste'; // Região Sudeste
+                } else if (latitude >= -30.0 && longitude >= -60.0) {
+                    return 'Sul'; // Região Sul
+                }
+                return 'Desconhecida'; // Região não identificada
+            }
+        
+            // Ajustar preços com base na região
+            function ajustarPrecos(regiao) {
+                const ajuste = {
+                    'Norte': [50, 30, 70],
+                    'Nordeste': [40, 20, 60],
+                    'Centro-Oeste': [30, 10, 50],
+                    'Sudeste': [20, 5, 30],
+                    'Sul': [10, 5, 20]
+                };
+        
+                // Ajusta os preços com base na região
+                if (ajuste[regiao]) {
+                    precoIndividual = precoIndividual.map((preco, index) => preco + ajuste[regiao][0]);
+                    precoEmpresarial = precoEmpresarial.map((preco, index) => preco + ajuste[regiao][1]);
+                    precoPremium = precoPremium.map((preco, index) => preco + ajuste[regiao][2]);
+                }
+        
+                // Atualize os preços no HTML
+                document.querySelector('#exame-6-meses-individual + label').innerText = `Exame de 6 meses: R$ ${precoIndividual[0]},00`;
+                document.querySelector('#exame-1-ano-individual + label').innerText = `Exame de 1 ano: R$ ${precoIndividual[1]},00`;
+                document.querySelector('#exame-2-anos-individual + label').innerText = `Exame de 2 anos: R$ ${precoIndividual[2]},00`;
+        
+                document.querySelector('#exame-6-meses-empresarial + label').innerText = `Exame de 6 meses: R$ ${precoEmpresarial[0]},00 por funcionário`;
+                document.querySelector('#exame-1-ano-empresarial + label').innerText = `Exame de 1 ano: R$ ${precoEmpresarial[1]},00 por funcionário`;
+                document.querySelector('#exame-2-anos-empresarial + label').innerText = `Exame de 2 anos: R$ ${precoEmpresarial[2]},00 por funcionário`;
+        
+                document.querySelector('#exame-6-meses-premium + label').innerText = `Exame de 6 meses: R$ ${precoPremium[0]},00`;
+                document.querySelector('#exame-1-ano-premium + label').innerText = `Exame de 1 ano: R$ ${precoPremium[1]},00`;
+                document.querySelector('#exame-2-anos-premium + label').innerText = `Exame de 2 anos: R$ ${precoPremium[2]},00`;
+        
+                // Atualiza os valores dos inputs de rádio
+                document.querySelector('input[name="exame"][value="150"]').value = precoIndividual[0];
+                document.querySelector('input[name="exame"][value="250"]').value = precoIndividual[1];
+                document.querySelector('input[name="exame"][value="400"]').value = precoIndividual[2];
+                document.querySelector('input[name="exame"][value="100"]').value = precoEmpresarial[0];
+                document.querySelector('input[name="exame"][value="180"]').value = precoEmpresarial[1];
+                document.querySelector('input[name="exame"][value="300"]').value = precoEmpresarial[2];
+                document.querySelector('input[name="exame"][value="300"]').value = precoPremium[0];
+                document.querySelector('input[name="exame"][value="500"]').value = precoPremium[1];
+                document.querySelector('input[name="exame"][value="800"]').value = precoPremium[2];
+        
+                // Atualiza o valor do botão de compra
+                atualizarValorBotao();
+            }
+        
+            function atualizarValorBotao() {
+                const selectedPlan = document.querySelector('input[name="exame"]:checked');
+                if (selectedPlan) {
+                    valorExameSelecionado = selectedPlan.value; // Armazena o valor do exame selecionado
+                    valorComprar.textContent = valorExameSelecionado + ',00'; // Atualiza para o valor do plano selecionado
+                } else {
+                    valorComprar.textContent = '0,00'; // Valor padrão se nenhum plano estiver selecionado
+                }
+            }
+        
+            planoIndividual.addEventListener('click', () => {
+                // Fecha os outros planos
+                descricaoEmpresarial.style.display = 'none';
+                imagemEmpresarial.style.display = 'none';
+                descricaoPremium.style.display = 'none';
+                imagemPremium.style.display = 'none';
+        
+                // Exibe ou oculta o plano individual
+                descricaoIndividual.style.display = descricaoIndividual.style.display === 'block' ? 'none' : 'block';
+                imagemIndividual.style.display = imagemIndividual.style.display === 'block' ? 'none' : 'block';
+            });
+        
+            planoEmpresarial.addEventListener('click', () => {
+                // Fecha os outros planos
+                descricaoIndividual.style.display = 'none';
+                imagemIndividual.style.display = 'none';
+                descricaoPremium.style.display = 'none';
+                imagemPremium.style.display = 'none';
+        
+                // Exibe ou oculta o plano empresarial
+                descricaoEmpresarial.style.display = descricaoEmpresarial.style.display === 'block' ? 'none' : 'block';
+                imagemEmpresarial.style.display = imagemEmpresarial.style.display === 'block' ? 'none' : 'block';
+            });
+        
+            planoPremium.addEventListener('click', () => {
+                // Fecha os outros planos
+                descricaoIndividual.style.display = 'none';
+                imagemIndividual.style.display = 'none';
+                descricaoEmpresarial.style.display = 'none';
+                imagemEmpresarial.style.display = 'none';
+        
+                // Exibe ou oculta o plano premium
+                descricaoPremium.style.display = descricaoPremium.style.display === 'block' ? 'none' : 'block';
+                imagemPremium.style.display = imagemPremium.style.display === 'block' ? 'none' : 'block';
+            });
+        
+            document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+                radio.addEventListener('change', () => {
+                    // Atualiza o valor na variável e no botão de compra com base no valor do rádio selecionado
+                    atualizarValorBotao();
+                });
+            });
+        
+            function verificarSelecao() {
+                const radiosSelecionados = document.querySelector('input[type="radio"]:checked');
+        
+                if (!radiosSelecionados) {
+                    const modal = new bootstrap.Modal(document.getElementById('avisoModal'));
+                    modal.show();
+                } else {
+                    window.location.href = 'other.html';
+                }
+            }
+        </script>
+    </div>
+    <div class="footer">
+        <footer class="footer-content">
+            <div class="logo-redes">
+                <div class="logo">
+                    <img src="assets/images/logohexamsorg.png" alt="Logo Examsorg" style="height: 50px;">
+                </div>
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com" target="_blank" class="redesocial"><img
+                            src="assets/images/logoinsta.svg" alt="Instagram" class="icon"></a>
+                    <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img
+                            src="assets/images/logowhatsapp.svg" alt="WhatsApp" class="icon"></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img
+                            src="assets/images/logotiktok.svg" alt="TikTok" class="icon"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="redesocial"><img
+                            src="assets/images/logoface.svg" alt="Facebook" class="icon"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="redesocial"><img
+                            src="assets/images/logoyoutube.svg" alt="YouTube" class="icon"></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img
+                            src="assets/images/logolinkedin.svg" alt="LinkedIn" class="icon"></a>
+                </div>
+
+                <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+            </div>
+            <div class="info-contato">
+                <div class="entre-contato">
+                    <p>
+                        <img src="assets/images/telefone.svg" alt="icon telefone"
+                            style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                    </p>
+                    <p>
+                        <img src="assets/images/email.svg" alt="icon email" style="height: 20px; padding-bottom: 6px;"
+                            class="space-icontato">
+                        <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com"
+                            class="link-email">contato@examsorg.com</a>
+                    </p>
+                </div>
+                <div class="enviar-email">
+                    <input type="email" class="input-email-footer"
+                        placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+                    <button class="botao-enviar">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+
+            <div class="ultima-coluna">
+                <div class="certificados">
+                    <div class="certificado-logos">
+                        <img src="assets/images/siteseguro.svg" alt="Site 100% siteseguro"
+                            style="height: 30px; padding-right: 15px;">
+                        <img src="assets/images/fsccertificado.svg" alt="Certificado FSC"
+                            style="height: 30px; padding-right: 10px;">
+                        <img src="assets/images/certificadogoogle.svg" alt="Certificado segurança by Google"
+                            style="height: 30px; padding-right: 10px;">
+                    </div>
+                </div>
+                <div class="pagamento-logos">
+                    <p class="text-pagamento">Formas de Pagamento:</p>
+                    <img src="assets/images/logovisa.svg" alt="Visa" style="height: 25px;">
+                    <img src="assets/images/logomastercard.svg" alt="Mastercard" style="height: 25px;">
+                    <img src="assets/images/logopaypal.svg" alt="PayPal" style="height: 25px;">
+                    <img src="assets/images/logodiscover.svg" alt="Discover" style="height: 25px;">
+                    <img src="assets/images/logoelo.svg" alt="Elo" style="height: 25px;">
+                    <img src="assets/images/logopix.svg" alt="Pix" style="height: 25px;">
+                    <img src="assets/images/logoboletoo.svg" alt="Boleto" style="height: 25px;">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <p class="copyright">© 2024 EXAMSORG®. Todos os direitos reservados. CNPJ: 12.345.678/0001-90.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="avisoModal" tabindex="-1" aria-labelledby="avisoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="avisoModalLabel">Atenção</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Por favor, selecione um plano antes de prosseguir com a compra.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
