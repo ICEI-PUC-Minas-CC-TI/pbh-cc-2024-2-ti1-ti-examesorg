@@ -1,0 +1,330 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDEBCC;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+    height: 120px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 40px;
+}
+
+.botao-sair {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    color: #0BBD29;
+    border: 2px solid #0BBD29;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+}
+.botao-sair:hover {
+    background-color: #252525; 
+    color: #0BBD29;
+    font-weight: 700; 
+    font-size: 18px; 
+    padding: 0 15px; 
+}
+.seta {
+    height: 15px; 
+    transition: stroke-width 0.3s ease; 
+    stroke-width: 3px; 
+    color:#0BBD29
+}
+
+/* Layout do conteúdo principal */
+main {
+    padding: 200px 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px #0E4434 ;
+    overflow: auto;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.tituloP {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.subtitulo a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F954C ;
+    text-decoration: none;
+}
+
+.subtitulo a:hover {
+    text-decoration: underline;
+}
+
+.aviso {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Estilos do formulário */
+form h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Agrupar os campos do formulário */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os campos */
+    justify-content: space-between;
+}
+
+/* Estilos dos campos */
+.form {
+    flex: 1 1 48%; /* Cada campo ocupa 48% do espaço para duas colunas */
+}
+
+.formulario-controle {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Campo de texto grande */
+textarea.formulario-controle {
+    height: 100px;
+}
+
+/* Grupo de botões radio */
+.form-check-group {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.form-check {
+    display: flex; /* Usa flexbox para layout */
+    align-items: flex-start;; 
+    
+
+}
+
+.form-check label {
+    margin-right: 20px; /* Espaço entre as opções */
+    margin-top: 0px;
+
+
+}
+
+.formulario-check-label {
+    font-weight: 500;
+    color: #333;
+}
+
+
+/* Estilo do botão */
+button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0F954C ;
+}
+
+a {
+    color: #25b53e; /* Usa a mesma cor do elemento pai ou defina uma cor específica */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a:hover {
+    color: #000; /* Você pode adicionar uma cor personalizada para o hover */
+    text-decoration: underline; /* Se quiser, pode adicionar o sublinhado ao passar o mouse */
+}
+
+
+/* Rodapé */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    color:#ccc;
+    height: 250px;
+    width: 100%;
+    padding: 50px 20px;
+    margin-left: 0;
+    margin-right: 0%;
+    position: relative;
+    z-index: 1;
+
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    background-color: #252525;
+}
+
+.logo {
+    color: #fff; 
+    flex: 1; 
+    text-align: left; 
+    margin-bottom: 30px;
+}
+.logo-redes {
+    padding-right: 10px;
+    margin-bottom: 20;
+    margin-left: 2%;
+}
+
+.redes-sociais{
+    margin: 5px; 
+    margin-left: 0%;
+    row-gap:var(#0BBD29);
+    margin-bottom: 20px;
+}
+.redesocial{
+    padding-right: 10px;
+}
+
+.info-contato {
+    color: #fff;
+    flex: 1; 
+    text-align: left;
+    padding-left: 25%;
+}
+.input-email-footer { 
+    max-width: 70%;
+    margin-top: 20px;
+}
+
+.ultima-coluna {
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    width: 100%;
+    align-items: end;
+}
+
+.space-icontato {
+    padding-right: 3px;
+}
+
+.contatos-label {
+    color: #0BBD29;
+    font-weight: 400; 
+    
+}
+.link-email {
+    color:#fff;
+    font-weight: 300;
+}
+.link-politica {
+    color:#fff;
+    font-weight: 300;
+    font-size: 15px; 
+}
+
+.input-email {
+    margin-top: 0px;
+    padding: 5px; 
+    border: none;
+    border-radius: 5px;
+}
+.certificados {
+    margin-bottom: 57px;
+}
+.text-pagamento{
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: 102%;
+    padding: 10px;
+    font-size: 12px;
+
+}
+
+/* Estilo básico para a bolinha flutuante */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF; /* Cor do botão */
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Para garantir que o botão fique acima de outros elementos */
+}
+
+.floating-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+/* Estilo para dicas de preenchimento */
+.info-dica {
+    font-size: 0.9em;
+    color: #6c757d; 
+    margin-bottom: 20px;
+    margin-top:0px ;
+
+}
+
+

@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da empresa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cde.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/images/logohexamsorg.png" alt="Logo da HexamsOrg">
+        <a href="outraPessoa.html" aria-label="Voltar à página anterior"></a>
+        <div>
+            <button class="botao-sair" aria-label="Voltar à página anterior">
+                <a href="outraPessoa.html">Voltar</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#00FFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <nav aria-label="Navegação principal">
+            <div class="textoInicial">
+                <h1 class="tituloP">Faça aqui o Cadastro</h1>
+            </div>
+            <h2 class="subtitulo"><a href="outraPessoa.html" aria-label="Mais informações">Para mais informações clique aqui</a></h2>
+            <p>Para melhor agendamento de funcionários, preencha um cadastro com as informações da empresa, e então será
+                direcionado para uma página de agendamento.</p>
+            <p class="aviso"> Aviso Importante:<br>
+                Ao preencher os dados abaixo, você declara que as informações prestadas são verdadeiras e corretas.
+                Falsas declarações podem estar sujeitas a penalidades legais. Por favor, forneça informações precisas e
+                atualizadas.
+            </p>
+        </nav>
+
+        <form id="formulario-empresa" class="formularioEmpresa" action="outraPessoa.html" aria-labelledby="cadastroTitulo">
+
+            <h2 id="cadastroTitulo">Cadastro</h2>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="nome-fantasia" class="formulario-label">Nome Fantasia*</label>
+                    <input type="text" class="formulario-controle" id="nome-fantasia" name="nome-fantasia" required aria-required="true" placeholder="Digite o nome fantasia da empresa">
+                    <div class="info-dica">Ex: Nome comercial utilizado pela empresa.</div>
+                </div>
+
+                <div class="form">
+                    <label for="inscricao" class="formulario-label">N° de inscrição*</label>
+                    <input type="text" class="formulario-controle" id="inscricao" name="inscricao" required aria-required="true" placeholder="Digite o número de inscrição">
+                    <div class="info-dica">Ex: Inscrição na Junta Comercial.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="razao-social" class="formulario-label">Razão social*</label>
+                    <input type="text" class="formulario-controle" id="razao-social" name="razao-social" required aria-required="true" placeholder="Digite a razão social">
+                    <div class="info-dica">Ex: Nome legal da empresa.</div>
+                </div>
+
+                <div class="form">
+                    <label for="cnpj" class="formulario-label">CNPJ*</label>
+                    <input type="text" class="formulario-controle" id="cnpj" name="cnpj" required aria-required="true" placeholder="Digite o CNPJ">
+                    <div class="info-dica">Ex: 00.000.000/0001-00</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="inicio-atividade" class="formulario-label">Início de atividade*</label>
+                    <input type="text" class="formulario-controle" id="inicio-atividade" name="inicio-atividade" required aria-required="true" placeholder="Digite a data de início">
+                    <div class="info-dica">Ex: DD/MM/AAAA</div>
+                </div>
+
+                <div class="form">
+                    <label for="email" class="formulario-label">Email*</label>
+                    <input type="email" class="formulario-controle" id="email" name="email" required aria-required="true" placeholder="Digite o e-mail">
+                    <div class="info-dica">Ex: contato@empresa.com</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form">
+                    <label for="celular" class="formulario-label">Celular*</label>
+                    <input type="text" class="formulario-controle" id="celular" name="celular" required aria-required="true" placeholder="Digite o celular">
+                    <div class="info-dica">Ex: (11) 91234-5678</div>
+                </div>
+
+                <div class="form">
+                    <label for="info-adicionais" class="formulario-label">Informações adicionais*</label>
+                    <textarea class="formulario-controle" id="info-adicionais" name="info-adicionais" required aria-required="true" placeholder="Digite informações adicionais"></textarea>
+                    <div class="info-dica">Ex: Observações relevantes.</div>
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Quantidade de funcionários*</legend>
+                <div class="form-check-group">
+                    <div class="form-check">
+                        <input class="formulario-check-input" type="radio" name="qtde" id="qtde1" value="0-30" required aria-required="true">
+                        <label class="formulario-check-label" for="qtde1">0-30</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="formulario-check-input" type="radio" name="qtde" id="qtde2" value="31-100" required aria-required="true">
+                        <label class="formulario-check-label" for="qtde2">31-100</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="formulario-check-input" type="radio" name="qtde" id="qtde3" value="101+" required aria-required="true">
+                        <label class="formulario-check-label" for="qtde3">101+</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-dark" aria-label="Enviar cadastro">Enviar</button>
+        </form>
+
+    </main>
+
+    <div class="footer">
+        <footer class="footer-content">
+            <div class="logo-redes">
+                <div class="logo">
+                    <img src="assets/images/logohexamsorg.png" alt="Logo Examsorg" style="height: 50px;">
+                </div>
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com" target="_blank" class="redesocial"><img src="assets/images/logoinsta.png" alt="Instagram" style="height: 30px;"></a>
+                    <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img src="assets/images/logowhatsapp.png" alt="WhatsApp" style="height: 30px;"></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img src="assets/images/logotiktok.png" alt="TikTok" style="height: 30px;"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="redesocial"><img src="assets/images/logoface.png" alt="Facebook" style="height: 30px;"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="redesocial"><img src="assets/images/logoyoutube.png" alt="LinkedIn" style="height: 30px;"></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img src="assets/images/logolinkedin.png" alt="LinkedIn" style="height: 30px;"></a>
+                </div>
+                <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+            </div>
+            <div class="info-contato">
+                <div class="entre-contato">
+                    <p>
+                        <img src="telefone.svg" alt="icon telefone" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                    </p>
+                    <p>
+                        <img src="email.svg" alt="icon email" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com" class="link-email">contato@examsorg.com</a>
+                    </p>
+                </div>
+                    <input type="email" class="input-email-footer" placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+            </div>
+            
+            <div class="ultima-coluna">
+                <div class="certificados">
+                    <div class="certificado-logos">
+                        <img src="assets/images/siteseguro.png" alt="Site 100% siteseguro" style="height: 30px; padding-right: 15px;">
+                        <img src="assets/images/fsccertificado.png" alt="Certificado FSC" style="height: 30px; padding-right: 10px;">
+                        <img src="assets/images/certificadogoogle.png" alt="Certificado segurança by Google" style="height: 30px; padding-right: 10px;">
+                    </div>
+                </div>
+                <div class="pagamento-logos">
+                    <p class="text-pagamento">Formas de Pagamento:</p>
+                    <img src="assets/images/logovisa.png" alt="Visa" style="height: 25px;">
+                    <img src="assets/images/logomastercard.png" alt="Mastercard" style="height: 25px;">
+                    <img src="assets/images/logopaypal.png" alt="PayPal" style="height: 25px;">
+                    <img src="assets/images/logodiscover.png" alt="Discover" style="height: 25px;">
+                    <img src="assets/images/logoelo.png" alt="Elo" style="height: 25px;">
+                    <img src="assets/images/logopix.png" alt="Pix" style="height: 25px;">
+                    <img src="assets/images/logoboletoo.png" alt="Boleto" style="height: 25px;">
+                </div>
+            </div>
+        </footer>
+
+    
+    <button class="floating-button" aria-label="Configurações de acessibilidade" onclick="toggleAccessibility()">A</button>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('.formularioEmpresa');
+
+    // Máscaras de entrada para CNPJ, celular e data
+    function applyMasks() {
+        const cnpjInput = document.getElementById('cnpj');
+        const celularInput = document.getElementById('celular');
+        const inscricaoInput = document.getElementById('inscricao');
+        const inicioAtividadeInput = document.getElementById('inicio-atividade');
+
+        cnpjInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '')
+                .replace(/(\d{2})(\d)/, '$1.$2')
+                .replace(/(\d{3})(\d)/, '$1.$2')
+                .replace(/(\d{3})(\d)/, '$1/$2')
+                .replace(/(\d{4})(\d)/, '$1-$2')
+                .substring(0, 18);
+        });
+
+        celularInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '')
+                .replace(/(\d{2})(\d)/, '($1) $2')
+                .replace(/(\d{5})(\d)/, '$1-$2')
+                .substring(0, 15);
+        });
+
+        inscricaoInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, ''); // Apenas números
+        });
+
+        inicioAtividadeInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '')
+                .replace(/(\d{2})(\d)/, '$1/$2')
+                .replace(/(\d{2})(\d)/, '$1/$2')
+                .replace(/(\d{2})(\d)/, '$1/$2')
+                .substring(0, 8); // DD/MM/AA
+        });
+    }
+
+    // Função para validar a data
+    function isValidDate(dateString) {
+        const parts = dateString.split('/');
+        if (parts.length !== 2) return false; // Valida o formato DD/MM
+
+        const day = parseInt(parts[0], 10);
+        const year = parseInt(parts[1], 10);
+
+        // Para o ano, assumimos que o formato é AA (00-99)
+        const fullYear = year < 100 ? 2000 + year : year;
+
+        const date = new Date(fullYear, 0, day); // Janeiro é 0
+        return date.getFullYear() === fullYear && date.getDate() === day;
+    }
+
+    // Validação do formulário e redirecionamento
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        let isValid = true;
+
+        // Verifica campos obrigatórios
+        const requiredFields = form.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('is-invalid'); // Adiciona classe para destacar campos inválidos
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+
+        // Validação do e-mail
+        const emailInput = document.getElementById('email');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex para validação de e-mail
+        if (!emailPattern.test(emailInput.value.trim())) {
+            isValid = false;
+            emailInput.classList.add('is-invalid');
+            alert("Por favor, insira um e-mail válido.");
+        } else {
+            emailInput.classList.remove('is-invalid');
+        }
+
+        // Validação do celular
+        const celularInput = document.getElementById('celular');
+        if (celularInput.value.length < 14) { // Verifica se o número está completo
+            isValid = false;
+            celularInput.classList.add('is-invalid');
+            alert("Por favor, insira um número de celular válido.");
+        } else {
+            celularInput.classList.remove('is-invalid');
+        }
+
+        // Validação do CNPJ
+        const cnpjInput = document.getElementById('cnpj');
+        if (cnpjInput.value.length < 18) { // Verifica se o CNPJ está completo
+            isValid = false;
+            cnpjInput.classList.add('is-invalid');
+            alert("Por favor, insira um CNPJ válido.");
+        } else {
+            cnpjInput.classList.remove('is-invalid');
+        }
+
+        // Validação do número de inscrição
+        const inscricaoInput = document.getElementById('inscricao');
+        if (!/^\d+$/.test(inscricaoInput.value.trim())) { // Verifica se só contém números
+            isValid = false;
+            inscricaoInput.classList.add('is-invalid');
+            alert("O número de inscrição deve conter apenas números.");
+        } else {
+            inscricaoInput.classList.remove('is-invalid');
+        }
+
+        // Validação da data de início de atividade
+        const inicioAtividadeInput = document.getElementById('inicio-atividade');
+        if (!isValidDate(inicioAtividadeInput.value.trim())) {
+            isValid = false;
+            inicioAtividadeInput.classList.add('is-invalid');
+            alert("Por favor, insira uma data válida no formato DD/MM/AA.");
+        } else {
+            inicioAtividadeInput.classList.remove('is-invalid');
+        }
+
+        if (isValid) {
+            // Se válido, redireciona para a nova página
+            window.location.href = 'outraPessoa.html'; // Substitua pela URL da página de destino
+        } else {
+            alert("Por favor, preencha todos os campos obrigatórios corretamente.");
+        }
+    });
+
+    applyMasks();
+});
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
