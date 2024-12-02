@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adm.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #DDEBCC;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #252525;
+            height: 120px;
+            width: 100%;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        img {
+            height: 60px;
+        }
+        .botao-sair {
+            display: flex;
+            align-items: center;
+            background-color: #252525;
+            color: #0BBD29;
+            border: 2px solid #0BBD29;
+            border-radius: 15px;
+            text-decoration: none;
+            height: 30px;
+            padding: 0 10px;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 16px; 
+            transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+        }
+        .botao-sair:hover {
+            background-color: #252525; 
+            color: #0BBD29;
+            font-weight: 700; 
+            font-size: 18px; 
+            padding: 0 15px; 
+        }
+        .seta {
+            height: 15px; 
+            transition: stroke-width 0.3s ease; 
+            stroke-width: 3px; 
+        }
+        .botao-sair:hover .seta {
+            stroke-width: 5px; 
+        }
+        .content {
+            margin-top: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 0px; 
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px; 
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px; 
+        }
+        .container-centralizado {
+            margin-top: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 20px; 
+            width: 100%;
+        }
+        h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h5 {
+            font-size: 15px; 
+            font-weight: bold; 
+            margin-bottom: 5px; 
+            text-align: left; 
+        }
+        input[type="text"], input[type="email"] {
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #ccc; 
+            width: 100%; 
+            font-size: 12px; 
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #0BBD29; 
+            outline: none;
+        }
+        .container {
+            margin-bottom: 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            width: 100%; 
+        }
+        .pesquisar {
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        } 
+        h1 {
+            font-size: 30px; 
+            font-weight: bold; 
+            text-align: center;
+	        margin-top: 2%; 
+        }
+        h3 {
+            margin-bottom: 30px;
+            text-align: center; 
+        }
+        .input-nome-empresa {
+            background-color: #fff;
+            
+        }
+       
+        .botao-buscar-empresas {
+            background-color: #0BBD29; 
+            color: #252525; 
+            border: 1px solid #252525;
+            border-radius: 10px; 
+            padding: 12px 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+            font-size: 13px; 
+            font-weight: 550;
+            display: flex; 
+            align-items: center; 
+            min-width: 190px; 
+        }
+        .botao-buscar-empresas:hover {
+            background-color: #252525; 
+            color: #0BBD29; 
+            font-weight: bold; 
+            box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29; 
+            border: 1px solid #252525;
+            transform: translateX(2px);
+        }
+        
+        .botao-buscar-funcionario {
+            display: flex;
+            justify-content: center;
+            background-color: #0BBD29; 
+            color: #252525; 
+            border: 1px solid #252525; 
+            border-radius: 10px; 
+            padding: 12px 18px;
+            cursor: pointer; 
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+            font-size: 13px;
+            font-weight: 550;
+            display: flex; 
+            align-items: center; 
+            min-width: 190px;
+        }
+
+        
+        .botao-buscar-funcionario:hover {
+            background-color: #252525; 
+            color: #0BBD29; 
+            font-weight: bold;
+            box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29; 
+            
+            border: 1px solid #252525;
+            transform: translateX(2px);
+        }
+
+                
+        .botao-gerenciar {
+            min-width: 200;
+            background-color: #0BBD29;
+            color: #252525;
+            min-width: 180px;
+            border: 2px solid #0BBD29;
+            border-radius: 10px;
+            padding: 12px 18px 12px 53px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+            font-weight: 550;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #252525;
+            margin-bottom: 60px;
+        }
+
+        .botao-gerenciar:hover {
+            background-color: #252525;
+            color: #0BBD29;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29;
+            border: 1px solid #252525;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #252525;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            visibility: hidden; 
+        }
+        
+        .gif-loading {
+            width: 100px; 
+            height: auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between; 
+            margin-bottom: 10px; 
+            width: 100%; 
+            align-items: center; 
+        }
+        .col {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start; 
+            flex: 1; 
+            margin-right: 5px; 
+        }
+        .col:last-child {
+            margin-right: 0;
+        }
+        
+        .address-inputs {
+            margin-bottom: 10px;
+        }
+        .inline-inputs {
+            display: flex; 
+            gap: 20px; 
+            width: 100%; 
+        }
+        .center {
+            display: block;
+            justify-content: center; 
+            width: 100%; 
+        }
+        .center-content {
+            display: flex;
+            justify-content: center; 
+            width: 100%; 
+            margin-bottom: 20px; 
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .aling-esquerda{
+            align-items: left;
+        }
+        .contente{
+            align-items:bottom;
+        }
+        
+        .space {
+            padding-bottom: 30px;
+           
+        }
+        .ajuste-buscar-empresa {
+            padding-left: 10px; 
+        }
+        .ajuste-buscar-funcionario {
+            padding-left: 10px; 
+        }
+        .lupa {
+            margin-right: 5px;
+        }
+        
+        .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #252525;
+            height: 250px;
+            width: 100%;
+            padding: 50px 20px;
+            margin-left: 0;
+            margin-right: 0%;
+            position: relative;
+            z-index: 1;
+
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; 
+        }
+
+        .logo {
+            color: #fff; 
+            flex: 1; 
+            text-align: left; 
+            margin-bottom: 30px;
+        }
+        .logo-redes {
+            padding-right: 10px;
+            margin-bottom: 20;
+            margin-left: 2%;
+	        margin-right: 10%;
+        }
+
+        .redes-sociais{
+            margin: 5px; 
+            margin-left: 0%;
+            row-gap:var(#0BBD29);
+            margin-bottom: 20px;
+        }
+        .redes-sociais {
+            display: flex; 
+            gap: 10px; 
+       }
+
+       .icon {
+            height: 30px; 
+            transition: transform 0.3s, filter 0.3s;
+       }
+
+       .redesocial:hover .icon {
+            transform: scale(1.2); 
+            filter: drop-shadow(0 0 5px #0BBD29); 
+       }
+
+
+        .info-contato {
+            color: #fff; 
+            flex: 1;
+            text-align: left;
+            padding-left: 15%;
+        }
+
+        .input-email-footer { 
+            max-width: 70%;
+            margin-top: 5%;
+        }
+	    .enviar-email {
+            display: flex;
+            flex-direction: col;
+            gap:2%;
+	}
+
+        .botao-enviar {
+            min-width: 80px;
+	        margin-top: 5%;
+            background-color: #0BBD29; 
+            color: #252525; 
+            border: 2px solid #0BBD29;
+            border-radius: 10px; 
+            cursor: pointer; 
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+            font-weight: 550;
+            font-size: 15px; 
+            border: 1px solid #0BBD29;
+	        min-height: 50px;
+        }
+
+        .botao-enviar:hover {
+            background-color: #0BBD29; 
+            color: #252525; 
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 0 10px #0BBD29, 0 0 10px #0BBD29; 
+            border: 1px solid #0BBD29; 
+
+        }
+        .ultima-coluna {
+            color: #fff; 
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content:end;
+            width: 100%;
+            align-items: end;
+	        margin-right: 2%;
+	        margin-left: 15%
+        }
+
+        .space-icontato {
+            padding-right: 3px;
+        }
+
+        .contatos-label {
+            color: #0BBD29; 
+            font-weight: 400; 
+            
+        }
+        .link-email {
+            color:#fff;
+            font-weight: 300;
+        }
+        .link-politica {
+            color:#fff;
+            font-weight: 300;
+            font-size: 15px; 
+        }
+        
+        .input-email {
+            margin-top: 0px;
+            padding: 5px;
+            border: none; 
+            border-radius: 5px; 
+        }
+        .certificados {
+            margin-bottom: 57px;
+        }
+        .text-pagamento{
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            
+            background-color: #ffffff;
+            margin-bottom: 0;
+            width: 102%;
+            padding: 10px;
+            font-size: 12px;
+
+        }
+        
+
+    </style>
+</head> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<body class="corpo">
+    <header>
+        <img src="logohexamsorg.png" alt="Logo Exams Org">
+        <div>
+            <a href="admpage.html" class="botao-sair">
+                Voltar 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0BBD29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+            <h1> ADMINISTRAÇÃO </h1>
+            <h3>Gerenciamento de Empresas e Funcionários cadastrados:</h3>
+        <div class="container">
+            <div class="aling-esquerda">
+
+            <!-- Busca por empresa -->        
+                <div class="contente">
+                    <div class="centralizado">
+                        <div class="pesquisar">
+                            <h5>Buscar por empresa:</h5>
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <input type="text" class="input-nome-empresa" placeholder="Digite o CNPJ -> Ex: 00.000.000/0000-00" style="width: 400px;">
+                                <div class="ajuste-buscar-empresa">
+                                    <button class="botao-buscar-empresas">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="lupa" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.442 1.397a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+                                        </svg>
+                                        Buscar Empresa
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Busca por funcionário -->
+                <div class="space">
+                    <div class="centralizado">
+                        <div class="pesquisar">
+                            <h5>Buscar por funcionário:</h5>
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <input type="text" class="input-nome-funcionario" placeholder="Digite o CPF -> Ex: 000.000.000-00" style="width: 400px;">
+                                <div class="ajuste-buscar-funcionario">
+                                    <button class="botao-buscar-funcionario">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+                                            class="lupa" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.442 1.397a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+                                        </svg>
+                                        Buscar Funcionário
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Coloquei os Inputs em 1 coluna (.col) com 4 linnhas (.row) 
+         pra ficar mais fácil de usar o "content" na div de fora e assim
+          estilizar os inputs deixando eles com um aspecto mais agradável visualmente. -->
+
+            <!-- Inputs de endereço (linha 1) -->
+            <div class="row address-inputs">
+                <div class="col">
+                    <h5>CEP:</h5>
+                    <input type="text" class="input-cep" placeholder="30690-020" style="flex: 0 0 30%;">
+                </div>
+                <div class="col">
+                    <h5>Endereço:</h5>
+                    <input type="text" class="input-endereco" placeholder="Ex: Rua das Petúnias" style="flex: 0 0 50%;">
+                </div>
+            </div>
+
+            <!-- Inputs de endereço (linha 2) -->
+            <div class="row address-inputs">
+                <div class="col">
+                    <h5>Bairro:</h5>
+                    <input type="text" class="input-bairro" placeholder="Lindéia" style="flex: 0 0 30%;">
+                </div>
+                <div class="col">
+                    <h5>Nº:</h5>
+                    <input type="text" class="input-numero" placeholder="514" style="flex: 0 0 15%;">
+                </div>
+                <div class="col">
+                    <h5>Logradouro:</h5>
+                    <input type="text" class="input-logradouro" placeholder="Casa, Apartamento, Condominio..." style="flex: 0 0 55%;">
+                </div>
+            </div>
+
+            <!-- Inputs de endereço (linha 3) -->
+            <div class="row address-inputs">
+                <div class="col">
+                    <h5>Cidade:</h5>
+                    <input type="text" class="input-cidade" placeholder="Belo Horizonte" style="flex: 0 0 30%;">
+                </div>
+                <div class="col">
+                    <h5>UF:</h5>
+                    <input type="text" class="input-uf" placeholder="MG" style="flex: 0 0 10%;">
+                </div>
+                <div class="col">
+                    <h5>Ponto de Referência:</h5>
+                    <input type="text" class="input-referencia" placeholder="Quadra Poliesportiva do Lindéia" style="flex: 0 0 60%;">
+                </div>
+            </div>
+
+            <!-- Inputs de endereço (linha 4) -->
+            <div class="row inline-inputs">
+                <div class="col">
+                    <h5>Telefone de Contato:</h5>
+                    <input type="text" class="input-telefone" placeholder="(31) 9 3385 - 1089">
+                </div>
+                <div class="col">
+                    <h5>Email:</h5>
+                    <input type="email" class="input-email" placeholder="exemplo@dominio.com">
+                </div>
+            </div>
+        </div>
+        <div>    <!-- Botão Gerenciar -->
+            <button class="botao-gerenciar">
+                Gerenciar
+            </button>
+
+            <!-- Overlay com GIF -->
+            <div id="overlay" class="overlay">
+                <img src="ampulhetacarregamento.gif" alt="Carregando" class="gif-loading">
+            </div>
+
+        </div>
+    <div class="footer">
+        <footer class="footer-content">
+            <div class="logo-redes">
+                <div class="logo">
+                    <img src="logohexamsorg resgistrado.png" alt="Logo Examsorg" style="height: 50px;">
+                </div>
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com" target="_blank" class="redesocial"><img src="logoinsta.svg" alt="Instagram" class="icon"></a>
+                    <a href="https://wa.me/551112345678" target="_blank" class="redesocial"><img src="logowhatsapp.svg" alt="WhatsApp" class="icon"></a>
+                    <a href="https://www.tiktok.com" target="_blank" class="redesocial"><img src="logotiktok.svg" alt="TikTok" class="icon"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="redesocial"><img src="logoface.svg" alt="Facebook" class="icon"></a>
+                    <a href="https://www.youtube.com" target="_blank" class="redesocial"><img src="logoyoutube.svg" alt="YouTube" class="icon"></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="redesocial"><img src="logolinkedin.svg" alt="LinkedIn" class="icon"></a>
+		        </div>
+
+                <a href="politicadeprivacidade" class="link-politica">Política de Privacidade</a>
+            </div>
+            <div class="info-contato">
+                <div class="entre-contato">
+                    <p>
+                        <img src="telefone.svg" alt="icon telefone" style="height: 20px; padding-bottom: 6px;" class="space-icontato">
+                        <span class="contatos-label">Telefone:</span> (11) 1234-5678
+                    </p>
+                    <p>
+                        <img src="email.svg" alt="icon email" style="height: 20px; padding-bottom: 3px;" class="space-icontato">
+                        <span class="contatos-label">E-mail:</span> <a href="mailto:contato@examsorg.com" class="link-email">contato@examsorg.com</a>
+                    </p>
+                </div>
+	             <div class= "enviar-email">
+                    	<input type="email" class="input-email-footer" placeholder="Digite seu email para ser notificado de..." aria-label="Email para contato">
+		    	<button class="botao-enviar"> 
+				Enviar
+            	    	</button>
+		     </div>
+            </div>
+            
+            <div class="ultima-coluna">
+                <div class="certificados">
+                    <div class="certificado-logos">
+                        <img src="siteseguro.svg" alt="Site 100% siteseguro" style="height: 30px; padding-right: 15px;">
+                        <img src="fsccertificado.svg" alt="Certificado FSC" style="height: 30px; padding-right: 10px;">
+                        <img src="certificadogoogle.svg" alt="Certificado segurança by Google" style="height: 30px; padding-right: 10px;">
+                    </div>
+                </div>
+                <div class="pagamento-logos">
+                    <p class="text-pagamento">Formas de Pagamento:</p>
+                    <img src="logovisa.svg" alt="Visa" style="height: 25px;">
+                    <img src="logomastercard.svg" alt="Mastercard" style="height: 25px;">
+                    <img src="logopaypal.svg" alt="PayPal" style="height: 25px;">
+                    <img src="logodiscover.svg" alt="Discover" style="height: 25px;">
+                    <img src="logoelo.svg" alt="Elo" style="height: 25px;">
+                    <img src="logopix.svg" alt="Pix" style="height: 25px;">
+                    <img src="logoboletoo.svg" alt="Boleto" style="height: 25px;">
+                </div>
+            </div>
+        </footer>
+    </div>
+        <p class="copyright">© 2024 EXAMSORG®. Todos os direitos reservados. CNPJ: 12.345.678/0001-90.</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
