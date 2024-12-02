@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tabela = document.getElementById("tabela-usuarios").getElementsByTagName('tbody')[0];
 
-    // Função para adicionar um novo usuário
     function adicionarUsuario() {
         const nome = document.getElementById("nome").value;
         const idade = document.getElementById("idade").value;
@@ -101,8 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("importar-csv").addEventListener("change", importarCSV);
 
-    carregarDoLocalStorage(); // Carrega os dados ao abrir a página
+    carregarDoLocalStorage(); 
 
-    // Associa o evento de exportação diretamente no botão no HTML
     document.getElementById("botao-exportar").addEventListener("click", exportarParaCSV);
 });

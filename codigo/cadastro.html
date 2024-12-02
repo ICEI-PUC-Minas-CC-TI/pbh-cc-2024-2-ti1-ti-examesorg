@@ -5,15 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastro de Funcionários</title>
-        <link rel="stylesheet" href="style.css"> <!--ref-CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css"> <!--ref-CSS -->
         <link rel="icon" href="assets/teste.png" sizes="16x16" type="image/png">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!--INICIO DO CABECALHO-->
         <header class="header">
             <div class="logo">
-                <img src="assets/logohexamsorg.png" alt="Logo" /> <!-- LOGO PADRAO -->
+                <img src="assets/images/logohexamsorg.png" alt="Logo" /> <!-- LOGO PADRAO -->
             </div>
             <div>
             <button class="botao-sair">
@@ -24,8 +23,6 @@
             </button>
         </div>
         </header>
-
-        <!--PAGINA DE CADASTRO-->
         <main class="main-content">
             <section class="form-section">
                 <h2>Cadastro de Funcionários</h2>
@@ -72,9 +69,9 @@
                 </div>
             </section>
 
-            <!-- exibir funcionarios -->
+            
             <section class="table-section">
-                <h2>Lista de Funcionários</h2>
+                <h2>Lista de Funcionários</h2> <!-- exibir funcionarios -->
                 <table id="tabela-usuarios" class="styled-table">
                     <thead>
                         <tr>
@@ -92,10 +89,10 @@
                 </table>
 
                 
-                <!-- exportar e importar csv-->
+                
                 <div class="botao-container">
                     <button id="botao-exportar">Exportar Planilha</button>
-                    <button onclick="document.getElementById('importar-csv').click();">Importar Planilha</button>
+                    <button onclick="document.getElementById('importar-csv').click();">Importar Planilha</button><!-- exportar e importar csv-->
                     <input type="file" id="importar-csv" accept=".csv" onchange="importarCSV()" style="display: none;">
                 </div>
                 
@@ -156,7 +153,7 @@
                 </div>
             </footer>
     
-            <script src="script.js"></script>
+            <script src="/assets/JS/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     
     
