@@ -137,7 +137,6 @@ nav a.active {
     color: #0BBD29;
 }
 
-/* Estilo da seção de formulário */
 .main-content {
     padding-top: 140px; /* Adiciona espaço suficiente para caber o cabecalho */
     background-color: #DDEBCC;
@@ -174,10 +173,10 @@ nav a.active {
     border-radius: 20px;
 }
 
-/* Botão */
+
 .botao-container {
-    text-align: center; /* Centraliza o texto e os botões */
-    margin-top: 20px; /* Espaçamento acima do contêiner */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 button {
@@ -185,11 +184,11 @@ button {
     color: #000000;
     padding: 10px 15px;
     border: 2px solid #252525;
-    border-radius: 20px; /* Torna o botão redondo */
+    border-radius: 20px; 
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
-    margin: 0 10px; /* Espaçamento horizontal entre os botões */
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 10px; 
 }
 
 button:hover {
