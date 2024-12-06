@@ -1,28 +1,65 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo implementa uma API RESTful baseada no JSONServer
-// O servidor JSONServer fica hospedado na seguinte URL
-// https://jsonserver.rommelpuc.repl.co/contatos
-//
-// Para montar um servidor para o seu projeto, acesse o projeto 
-// do JSONServer no Replit, faça o FORK do projeto e altere o 
-// arquivo db.json para incluir os dados do seu projeto.
-//
-// URL Projeto JSONServer: https://replit.com/@rommelpuc/JSONServer
-//
-// Autor: Rommel Vieira Carneiro
-// Data: 03/10/2023
+function validateForm() {
+    const inputs = document.querySelectorAll('input[required]');
+    for (let input of inputs) {
+        if (input.value.trim() === '') {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            input.focus();
+            return false;
+        }
+    }
+    return true;
+}
 
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('./db/db.json')
-  
-// Para permitir que os dados sejam alterados, altere a linha abaixo
-// colocando o atributo readOnly como false.
-const middlewares = jsonServer.defaults({ noCors: true })
-server.use(middlewares)
-server.use(router)
+function showPaymentSuccess() {
+    const paymentMessage = document.getElementById('payment-success');
+    paymentMessage.classList.remove('hidden');
+    setTimeout(() => {
+        paymentMessage.classList.add('show');
+    }, 100);
 
-server.listen(3000, () => {
-  console.log(`JSON Server is running em http://localhost:3000`)
-})
+    setTimeout(() => {
+        paymentMessage.classList.remove('show');
+        setTimeout(() => {
+            paymentMessage.classList.add('hidden');
+        }, 1000);
+    }, 3000);
+}
+
+function saveToLocalStorage() {
+    const formData = {};
+    const inputs = document.querySelectorAll('input, select');
+    
+    inputs.forEach(input => {
+        if (input.name) {
+            formData[input.name] = input.value;
+        }
+    });
+
+    localStorage.setItem('formPaymentData', JSON.stringify(formData));
+    console.log('Dados salvos no Local Storage:', formData);
+}
+
+document.querySelector('.Botao').addEventListener('click', (event) => {
+    event.preventDefault();
+    if (validateForm()) {
+        saveToLocalStorage();
+        showPaymentSuccess();
+    }
+});
+
+window.addEventListener('load', function () {
+    const valorExameSelecionado = localStorage.getItem('valorExameSelecionado');
+    const selectParcelas = document.getElementById('installments');
+
+    if (valorExameSelecionado) {
+        const valorTotal = parseFloat(valorExameSelecionado);
+        let parcelaValue = 0;
+
+        const options = selectParcelas.querySelectorAll('option');
+        options.forEach(option => {
+            const numParcelas = parseInt(option.value);
+            parcelaValue = (valorTotal / numParcelas).toFixed(2); 
+            option.textContent = `${numParcelas}x de R$ ${parcelaValue} sem juros`; 
+        });
+    }
+});
