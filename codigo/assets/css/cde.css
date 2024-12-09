@@ -1,0 +1,151 @@
+main {
+    padding: 200px 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px #0E4434 ;
+    overflow: auto;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.tituloP {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.subtitulo a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F954C ;
+    text-decoration: none;
+}
+
+.subtitulo a:hover {
+    text-decoration: underline;
+}
+
+.aviso {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between;
+}
+
+
+.form {
+    flex: 1 1 48%; 
+}
+
+.formulario-controle {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+ 
+textarea.formulario-controle {
+    height: 100px;
+}
+
+.form-check-group {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.form-check {
+    display: flex; 
+    align-items: flex-start;; 
+    
+
+}
+
+.form-check label {
+    margin-right: 20px; 
+    margin-top: 0px;
+
+
+}
+
+.formulario-check-label {
+    font-weight: 500;
+    color: #333;
+}
+
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0F954C; 
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+}
+
+.floating-button:hover {
+    background-color: #0056b3; 
+}
+
+.info-dica {
+    font-size: 0.9em;
+    color: #6c757d; 
+    margin-bottom: 20px;
+    margin-top:0px ;
+
+}
+
+@media (max-width: 480px) {
+    .tituloP {
+        font-size: 20px;
+    }
+
+    .subtitulo a {
+        font-size: 12px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .formulario-controle {
+        padding: 6px;
+    }
+
+    .floating-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .info-dica {
+        font-size: 0.7em;
+    }
+
+    .form-check-group {
+        flex-direction: column;
+    }
+}

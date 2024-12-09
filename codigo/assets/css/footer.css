@@ -1,0 +1,204 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    color: #ccc;
+    height: auto;
+    width: 100%;
+    padding: 20px 10px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    color: #fff;
+    flex: 1;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.logo-redes {
+    padding-right: 10px;
+    margin-bottom: 20;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+.redes-sociais {
+    margin: 5px;
+    display: flex;
+    gap: 10px;
+    margin-left: 0%;
+    margin-bottom: 20px;
+    row-gap: var(--cor-exemplo);
+}
+
+.icon {
+    height: 30px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.redesocial:hover .icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #0BBD29);
+}
+
+.info-contato {
+    color: #fff;
+    flex: 1;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.input-email-footer {
+    margin-top: 0px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    max-width: 70%;
+    height: 50px;
+}
+
+.enviar-email {
+    display: flex;
+    flex-direction: col;
+    gap: 2%;
+}
+
+.botao-enviar {
+    min-width: 70px;
+    background-color: #0BBD29;
+    color: #252525;
+    border: 2px solid #0BBD29;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 550;
+    font-size: 15px;
+    border: 1px solid #0BBD29;
+    min-height: 50px;
+}
+
+.botao-enviar:hover {
+    background-color: #0BBD29;
+    color: #252525;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 0 10px #0BBD29, 0 0 10px #0BBD29;
+    border: 1px solid #0BBD29;
+}
+
+.ultima-coluna {
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    align-items: end;
+    margin-right: 2%;
+    margin-left: 15%;
+}
+
+.space-icontato {
+    padding-right: 3px;
+}
+
+.contatos-label {
+    color: #0BBD29;
+    font-weight: 400;
+}
+
+.link-email {
+    color: #fff;
+    font-weight: 300;
+}
+
+.link-politica {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.certificados {
+    margin-bottom: 57px;
+}
+
+.text-pagamento {
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo, .info-contato, .ultima-coluna {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-redes {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .input-email-footer {
+        max-width: 90%;
+    }
+
+    .enviar-email {
+        flex-direction: column;
+    }
+
+    .botao-enviar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 5px;
+    }
+
+    .logo, .info-contato, .ultima-coluna {
+        margin-bottom: 15px;
+    }
+
+    .botao-enviar {
+        font-size: 14px;
+    }
+
+    .input-email-footer {
+        max-width: 90%;
+        height: 40px;
+    }
+
+    .redes-sociais {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        height: 25px;
+    }
+}

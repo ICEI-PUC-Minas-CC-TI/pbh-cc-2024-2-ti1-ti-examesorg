@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #DDEBCC;
+}
+
+img {
+    height: 80px;
+}
+
+.botao-voltar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #252525, #333);
+    color: #0BBD29;
+    border: 2px solid #0BBD29;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botao-voltar:hover {
+    background-color: #252525;
+    color: #0BBD29;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.seta {
+    height: 15px;
+    transition: stroke-width 0.3s ease;
+    stroke-width: 3px;
+    stroke: #0BBD29;
+}
+
+.botao-voltar:hover .seta {
+    stroke-width: 5px;
+}
+
+.container {
+    flex: 1;
+    margin-top: 140px;
+}
+
+.captcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.captcha-container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #0BBD29, #A9D7A6);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.captcha-background-container {
+    position: relative;
+    text-align: center;
+}
+
+#verifyButton {
+    background-color: #0BBD29;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#verifyButton:hover {
+    background-color: #0D7E3E;
+    transform: scale(1.05);
+}
+
+#submitButton {
+    background-color: #0BBD29;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submitButton:hover {
+    background-color: #0D7E3E;
+    transform: scale(1.05);
+}

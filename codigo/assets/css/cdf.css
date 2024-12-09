@@ -1,0 +1,203 @@
+.content {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0px; 
+    width: 100%;
+}
+.container-centralizado {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px; 
+    width: 100%;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #DDEBCC;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #0BBD29;
+}
+
+/* Estilo da seção de formulário */
+.main-content {
+    padding-top: 140px; /* Adiciona espaço suficiente para caber o cabecalho */
+    background-color: #DDEBCC;
+}
+
+
+.form-section, .table-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #DDEBCC;
+    color: #252525;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.form-container {
+    background-color: #DDEBCC;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Botão */
+.botao-container {
+    text-align: center; /* Centraliza o texto e os botões */
+    margin-top: 20px; /* Espaçamento acima do contêiner */
+}
+
+button {
+    background-color: #84CD7A;
+    color: #000000;
+    padding: 10px 15px;
+    border: 2px solid #252525;
+    border-radius: 20px; /* Torna o botão redondo */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    margin: 0 10px; /* Espaçamento horizontal entre os botões */
+}
+
+button:hover {
+    background-color: #252525; 
+    color: #0BBD29; 
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29; 
+    border: 1px solid #252525; 
+}
+
+
+/* Tabela de funcionários */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px;
+    text-align: left;
+    background-color: #d4f7d0;
+    color: #252525;
+    border-radius: 8px;
+    
+}
+
+.styled-table th {
+    background-color: #2abe43;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .content, .container-centralizado {
+        margin-top: 100px; /* Ajuste no topo para tablets */
+        padding: 10px;
+    }
+
+    .form-section, .table-section {
+        width: 90%; /* Ajusta o tamanho para telas menores */
+        margin: 10px auto;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .styled-table th, .styled-table td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content, .container-centralizado {
+        margin-top: 80px; /* Ajuste no topo para smartphones */
+    }
+
+    .form-section, .table-section {
+        width: 95%; /* Ajusta o tamanho para telas menores */
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .styled-table th, .styled-table td {
+        font-size: 12px;
+    }
+
+    input {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .content, .container-centralizado {
+        margin-top: 60px; /* Ajuste no topo para telas muito pequenas */
+    }
+
+    .form-section, .table-section {
+        width: 100%; /* Preenche toda a largura */
+        padding: 15px;
+    }
+
+    button {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    .styled-table th, .styled-table td {
+        font-size: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+  
+  
+  
+

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link href="npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet"><script src="npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Dashboards</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/grafico.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+
+:root {
+  --primary-color: #00a859;
+  --secondary-color: #333;
+  --setor-admin: #FF6384;
+  --setor-producao: #36A2EB;
+  --setor-manutencao: #FFCE56;
+  --setor-logistica: #4BC0C0;
+  --setor-qualidade: #9966FF;
+  --admissional-color: #FF4444;
+  --demissional-color: #1a237e;
+  --periodico-color: #4CAF50;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DDEBCC;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #252525;
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.titulo{
+  margin-top: 100px;
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #252525;
+  }
+
+.logo-header {
+  height: 60px;
+}
+
+.botao-sair {
+  display: flex;
+  align-items: center;
+  background-color: #252525;
+  color: #0BBD29;
+  border: 2px solid #0BBD29;
+  border-radius: 15px;
+  text-decoration: none;
+  height: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px; 
+  transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+}
+.botao-sair:hover {
+  background-color: #252525; 
+  color: #0BBD29;
+  font-weight: 700; 
+  font-size: 18px; 
+  padding: 0 15px; 
+}
+.seta {
+  height: 15px; 
+  transition: stroke-width 0.3s ease; 
+  stroke-width: 3px; 
+}
+.botao-sair:hover .seta {
+  stroke-width: 5px; 
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+
+.color-picker-container {
+  margin: 50px 0;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.color-picker-label {
+  display: inside;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.color-picker {
+  margin-left: 10px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.chart-container {
+  position: relative;
+  height: 600px;
+  margin-top: 30px;
+}
+
+.dashboard-card-week {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.calendar-container-week {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.weekday-column {
+  min-width: 180px;
+  height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exam-card {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-size: 0.85rem;
+  background: #f8f9fa;
+}
+
+.exam-card.admissional {
+  border-left: 4px solid var(--admissional-color);
+}
+
+.exam-card.demissional {
+  border-left: 4px solid var(--demissional-color);
+}
+
+.exam-card.periodico {
+  border-left: 4px solid var(--periodico-color);
+}
+
+.exam-card:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+}
+
+.weekday-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  border-radius: 8px 8px 0 0;
+  margin: -15px -15px 15px -15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.exam-type-badge {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  color: white;
+}
+
+.exam-type-badge.admissional {
+  background: var(--admissional-color);
+}
+
+.exam-type-badge.demissional {
+  background: var(--demissional-color);
+}
+
+.exam-type-badge.periodico {
+  background: var(--periodico-color);
+}
+
+.time-badge {
+  float: right;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.employee-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 3px solid var(--primary-color);
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.employee-details {
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #666;
+}
+
+@media (max-width: 1200px) {
+  .weekday-column {
+    min-width: 160px;
+  }
+  
+  .exam-card {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+</style></head><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<body>
+  <header>
+   
+    <div>
+        <a href="administracao.html" class="botao-sair">
+            Voltar 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0BBD29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="seta">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </a>
+    </div>
+</header>
+<div class="titulo">
+  <h1>ADMINISTRAÇÃO  >  DASHBOARDS</h1>
+</div>
+<div class="container mt-4">
+  <div class="color-picker-container">
+    <h5>Personalizar Cores dos Setores</h5>
+    <div>
+      <input type="color" id="adminColor" class="color-picker" value="#FF6384">
+      <span class="color-picker-label">Administrativo:</span>
+      <input type="color" id="producaoColor" class="color-picker" value="#36A2EB">
+      <span class="color-picker-label">Produção:</span>
+      <input type="color" id="manutencaoColor" class="color-picker" value="#FFCE56">
+      <span class="color-picker-label">Manutenção:</span>
+      <input type="color" id="logisticaColor" class="color-picker" value="#4BC0C0">
+      <span class="color-picker-label">Logística:</span>
+      <input type="color" id="qualidadeColor" class="color-picker" value="#9966FF">
+      <span class="color-picker-label">Qualidade:</span>
+    </div>
+  </div>
+  
+
+  <div class="dashboard-card">
+    <h4>Acidentes por Setor - Análise Anual</h4>
+    <div class="chart-container">
+      <canvas id="accidentChart"></canvas>
+    </div>
+  </div>
+
+  <div class="dashboard-card">
+    <h4>Distribuição de Acidentes por Mês</h4>
+    <div class="chart-container">
+      <canvas id="monthlyChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="dashboard-card-week">
+    <div class="calendar-container-week">
+      <div class="weekday-column">
+        <div class="weekday-header">Segunda</div>
+        <div id="monday"></div>
+      </div>
+      <div class="weekday-column">
+        <div class="weekday-header">Terça</div>
+        <div id="tuesday"></div>
+      </div>
+      <div class="weekday-column">
+        <div class="weekday-header">Quarta</div>
+        <div id="wednesday"></div>
+      </div>
+      <div class="weekday-column">
+        <div class="weekday-header">Quinta</div>
+        <div id="thursday"></div>
+      </div>
+      <div class="weekday-column">
+        <div class="weekday-header">Sexta</div>
+        <div id="friday"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="employeeModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Detalhes do Exame</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+          <img id="employeePhoto" class="employee-photo mb-3" src="" alt="Foto do Funcionário">
+          <h4 id="employeeName" class="mb-2"></h4>
+          <span id="examType" class="exam-type-badge mb-2"></span>
+        </div>
+        <div class="employee-details">
+          <div class="detail-item">
+            <span class="detail-label">CPF:</span>
+            <span id="employeeCPF"></span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Data e Horário:</span>
+            <span id="examDateTime"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/grafico.js"></script>
+<script src="npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>

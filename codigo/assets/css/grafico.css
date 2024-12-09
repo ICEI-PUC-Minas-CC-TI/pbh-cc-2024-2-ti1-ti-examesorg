@@ -1,0 +1,251 @@
+
+:root {
+    --primary-color: #00a859;
+    --secondary-color: #333;
+    --setor-admin: #FF6384;
+    --setor-producao: #36A2EB;
+    --setor-manutencao: #FFCE56;
+    --setor-logistica: #4BC0C0;
+    --setor-qualidade: #9966FF;
+    --admissional-color: #FF4444;
+    --demissional-color: #1a237e;
+    --periodico-color: #4CAF50;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDEBCC;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525;
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  .titulo{
+    margin-top: 100px;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #252525;
+    }
+  
+  .logo-header {
+    height: 60px;
+  }
+  
+  .botao-sair {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    color: #0BBD29;
+    border: 2px solid #0BBD29;
+    border-radius: 15px;
+    text-decoration: none;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px; 
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, font-size 0.3s, padding 0.3s; 
+  }
+  .botao-sair:hover {
+    background-color: #252525; 
+    color: #0BBD29;
+    font-weight: 700; 
+    font-size: 18px; 
+    padding: 0 15px; 
+  }
+  .seta {
+    height: 15px; 
+    transition: stroke-width 0.3s ease; 
+    stroke-width: 3px; 
+  }
+  .botao-sair:hover .seta {
+    stroke-width: 5px; 
+  }
+  
+  .dashboard-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .color-picker-container {
+    margin: 50px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .color-picker-label {
+    display: inside;
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  
+  .color-picker {
+    margin-left: 10px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .chart-container {
+    position: relative;
+    height: 600px;
+    margin-top: 30px;
+  }
+  
+  .dashboard-card-week {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .calendar-container-week {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  
+  .weekday-column {
+    min-width: 180px;
+    height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .exam-card {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-size: 0.85rem;
+    background: #f8f9fa;
+  }
+  
+  .exam-card.admissional {
+    border-left: 4px solid var(--admissional-color);
+  }
+  
+  .exam-card.demissional {
+    border-left: 4px solid var(--demissional-color);
+  }
+  
+  .exam-card.periodico {
+    border-left: 4px solid var(--periodico-color);
+  }
+  
+  .exam-card:hover {
+    transform: translateY(-2px);
+    background: #f0f0f0;
+  }
+  
+  .weekday-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    border-radius: 8px 8px 0 0;
+    margin: -15px -15px 15px -15px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .exam-type-badge {
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    color: white;
+  }
+  
+  .exam-type-badge.admissional {
+    background: var(--admissional-color);
+  }
+  
+  .exam-type-badge.demissional {
+    background: var(--demissional-color);
+  }
+  
+  .exam-type-badge.periodico {
+    background: var(--periodico-color);
+  }
+  
+  .time-badge {
+    float: right;
+    color: #666;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  
+  .employee-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    border: 3px solid var(--primary-color);
+  }
+  
+  .modal-content {
+    border-radius: 12px;
+  }
+  
+  .employee-details {
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .detail-item {
+    margin-bottom: 10px;
+  }
+  
+  .detail-label {
+    font-weight: bold;
+    color: #666;
+  }
+  
+  @media (max-width: 1200px) {
+    .weekday-column {
+      min-width: 160px;
+    }
+    
+    .exam-card {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  }
+  

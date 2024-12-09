@@ -1,0 +1,228 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container{ 
+    padding: 200px 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px #0E4434 ;
+    overflow: auto;
+     
+}
+
+.container form{
+    width: 750px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+form .row{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.row .column{
+    flex: 1 1 250px;
+}
+
+.column .title{
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box{
+    margin: 15px 0;
+}
+
+.input-box span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.column .flex{
+    display: flex;
+    gap: 15px;
+}
+
+.flex .input-box{
+    margin-top: 5px;
+}
+
+.input-box img{
+    height: 35px;
+    margin-top: 5px;
+}
+
+form .Botao{
+    width: 100%;
+    padding: 12px;
+    background: yellowgreen;
+    border: none;
+    outline: none;
+    border-radius: 6px;font-size: 20px;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.input-box select{
+    width: 100%;
+    padding: 12px; 
+    border-radius: 6px; 
+    font-size: 15px; 
+    margin-top: 5px;
+}
+
+
+#payment-success{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+}
+
+#payment-success.show{
+    opacity: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+#valor-parcela {
+    margin-left: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 50px 20px; /* Reduz o padding */
+    }
+
+    .container form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 18px; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .input-box input,
+    .input-box select {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos inputs */
+    }
+
+    .Botao {
+        font-size: 18px; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .container form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 16px; /* Ajusta ainda mais o tamanho da fonte do título */
+    }
+
+    .input-box input,
+    .input-box select {
+        font-size: 13px; /* Ajusta o tamanho da fonte dos inputs */
+    }
+
+    .Botao {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 14px; /* Ajusta o tamanho da fonte do título para telas menores */
+    }
+
+    .input-box input,
+    .input-box select {
+        font-size: 12px; /* Reduz o tamanho da fonte dos inputs */
+    }
+
+    .Botao {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

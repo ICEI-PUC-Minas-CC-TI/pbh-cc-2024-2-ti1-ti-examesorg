@@ -1,0 +1,14 @@
+{
+  "fullName": "Edson Arantes do Nascimento",
+  "email": "edsonarantes@gmail.com",
+  "address": "Rua - Numero - Bairro",
+  "city": "Belo Horizonte",
+  "state": "Minas Gerais",
+  "zipCode": "31456-105",
+  "cardName": "Edson Arantes do Nascimento",
+  "cardNumber": "9999 9999 9999 9999",
+  "cardExpMonth": "Março",
+  "cardExpYear": "2032",
+  "cardCVV": "456",
+  "installments": "1"
+}

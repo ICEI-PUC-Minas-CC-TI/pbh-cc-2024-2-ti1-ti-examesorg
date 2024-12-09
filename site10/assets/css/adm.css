@@ -1,0 +1,246 @@
+.content {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0px; 
+    width: 100%;
+}
+
+.container-centralizado {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px; 
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], .input-cnpj, .input-cpf {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ccc; 
+    width: 100%; 
+    font-size: 12px; 
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus, input[type="email"]:focus, .input-cnpj:focus, .input-cpf:focus {
+    border-color: #0BBD29; 
+    outline: none;
+}
+
+.container {
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%; 
+}
+
+.pesquisar {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h3 {
+    margin-bottom: 30px;
+    text-align: center; 
+}
+
+.input-nome-empresa {
+    background-color: #fff;
+}
+
+.botao-gerenciar {
+    min-width: 200;
+    background-color: #0BBD29;
+    color: #252525;
+    min-width: 180px;
+    border: 2px solid #0BBD29;
+    border-radius: 10px;
+    padding: 12px 18px 12px 53px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 550;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #252525;
+    margin-bottom: 60px;
+}
+
+.botao-gerenciar:hover {
+    background-color: #252525;
+    color: #025250;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 0 20px #0BBD29, 0 0 20px #0BBD29;
+    border: 1px solid #252525;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden; 
+}
+
+.gif-loading {
+    width: 100px; 
+    height: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 10px; 
+    width: 100%; 
+    align-items: center; 
+}
+
+.col {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    flex: 1; 
+    margin-right: 5px; 
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+.address-inputs {
+    margin-bottom: 10px;
+}
+
+.inline-inputs {
+    display: flex; 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.center {
+    display: block;
+    justify-content: center; 
+    width: 100%; 
+}
+
+.center-content {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.aling-esquerda{
+    align-items: left;
+}
+
+.contente{
+    align-items:bottom;
+}
+
+.space {
+    padding-bottom: 30px;
+}
+
+.ajuste-buscar-empresa {
+    padding-left: 10px; 
+}
+
+.ajuste-buscar-funcionario {
+    padding-left: 10px; 
+}
+
+.lupa {
+    margin-right: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .input-nome-empresa, .input-cnpj, .input-cpf {
+        width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        padding: 10px; /* Ajusta o padding */
+    }
+
+    .row {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .col {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .input-nome-empresa, .input-cnpj, .input-cpf {
+        width: 100%; /* Garante que o campo ocupe toda a largura disponível */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    .input-nome-empresa, .input-cnpj, .input-cpf {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-nome-empresa, .input-cnpj, .input-cpf {
+        width: 100%; /* Ocupa 100% da largura */
+        font-size: 16px; /* Tamanho de fonte maior para facilitar a leitura */
+        padding: 10px;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 100%; 
+        margin-bottom: 15px;
+    }
+
+    .inline-inputs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .space {
+        padding-bottom: 15px;
+    }
+}

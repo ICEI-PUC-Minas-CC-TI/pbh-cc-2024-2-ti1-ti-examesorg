@@ -1,0 +1,118 @@
+/* Define a fonte padrão para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo clara e neutra */
+    color: #333; /* Texto em cinza escuro */
+    margin: 0;
+    padding: 0;
+}
+
+.container_form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4a4a4a; /* Cor de texto para labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+input[type="url"],
+input[type="color"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+input[type="submit"] {
+    background-color: #4a90e2; /* Azul para o botão */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas no botão */
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #357abd; /* Azul mais escuro ao passar o mouse */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #4a90e2; /* Cor do acento para checkboxes e radio buttons */
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Espaçamento entre a caixa e o texto */
+}
+
+input[type="radio"] + label {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center; /* Alinha a radio button e o texto verticalmente no centro */
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Espaçamento entre a caixa e o texto */
+}
+
+input[type="checkbox"] + label {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center; /* Alinha a checkbox e o texto verticalmente no centro */
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: #4a90e2; /* Cor de fundo quando selecionado */
+    border: 2px solid #4a90e2; /* Borda azul quando selecionado */
+}
+
+select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

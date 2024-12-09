@@ -1,0 +1,287 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDEBCC;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.aviso {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto; 
+    padding: 10px 20px; 
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.card{
+    flex: 1 1 calc(33.333% - 40px); 
+    max-width: 400px; 
+    padding: 20px;
+    height: 300px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    transform: scale(0.9); 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card.active{
+    transform: scale(1.1); 
+    opacity: 1; 
+}
+
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.green { 
+    background-color: #28a745; 
+}
+
+.blue{
+    background-color: #007bff; 
+}
+
+.pink { 
+    background-color: #ff007f; 
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #fff;
+    color: inherit;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: start;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chat-toggle:hover {
+    background-color: #0056b3;
+}
+
+.chat-container{
+     position: relative;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #f0f8ff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+    display: none; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.chat-box.active {
+    display: block; 
+    transform: scale(1); 
+    opacity: 1;
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-form {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-form input, .chat-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.chat-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+    .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%; 
+        flex: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-box {
+        width: 90%; 
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .chat-header {
+        font-size: 1rem;
+    }
+}
+
+
+button:active {
+    transform: scale(0.95); 
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.chat-form textarea {
+    resize: none; 
+}
+
+.aviso {
+    background-color: #f8f9fa;  
+    padding: 20px;  
+    margin: 20px 0;  
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;  
+    font-size: 16px;  
+    color: #333;  
+    line-height: 1.5; 
+    font-family: 'Poppins', Arial, sans-serif; 
+    margin-top: 80px;
+}
+
+.aviso strong{
+    color: #007bff; 
+    font-weight: bold; 
+}
+
+.aviso br{
+    margin-bottom: 10px;  
+}
+
+.titulo-container {
+    text-align: center; 
+    margin-top: 120px; 
+    margin-bottom: 20px; 
+}
+
+.titulo-principal {
+    font-size: 3rem; 
+    color: #333;
+    font-weight: bold; 
+    font-family: 'Poppins', Arial, sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    letter-spacing: 1px; 
+    line-height: 1.2; 
+}
