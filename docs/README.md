@@ -85,77 +85,77 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
 
 ## Etapa de Entendimento
 
-> Matriz CSD:
->
->  *Certezas :
->   - O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
+Matriz CSD:
+
+   Certezas :
+   - O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
     - Não é um assunto priorizado dentro dos recursos humanos de uma empresa
     - Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
-> * Suposições:
->  - Facilitará a demanda do RH (recursos humanos).
+   Suposições:
+   - Facilitará a demanda do RH (recursos humanos).
    - Tornará mais eficiente a comunicação empresa-trabalhador.
    - Promoverá uma boa relação com as clinicas que realizam exames periodicos.
- * Dúvidas:
+   Dúvidas:
    - Somente o RH terá acesso ou os colaboradores também?
    - Seria útil que criar uma aba que conecte a empresa com uma clinica? 
    - Seria possível realizar o agendamento de forma automática na clinica caso a empresa optasse por isso?
   
->  Mapa de stakeholders:
-> - Pessoas Fundamentais.
+   Mapa de stakeholders:
+  - Pessoas Fundamentais.
     Setor de RH
     Funcionários
-> - Pessoas Importantes
+  - Pessoas Importantes
     Gestores
     Clínicas ocupacionais
-> - Pessoas Influenciadoras
+  - Pessoas Influenciadoras
     Empresários
     Sindicatos
     Seguranças do trabalho
-> Entrevistas qualitativas:
->   *Pergunta 1 - A sua empresa possui uma clínica própria ou terceirizada? Se a segunda opção, já teve problemas com a marcação na clínica ?
->   Resposta :
->      Todos os entrevistados afirmaram que a empresa em que trabalha possui outra empresa responsável.
->      Dois entrevistados responderam que não possuíram nenhum tipo de problema com marcação.
->      Três entrevistados afirmaram que já tiveram problemas com esse assunto, sendo avisados de última hora.
->   
->   *Pergunta 2 - Você acredita que a comunicação empresa-funcionario  seria melhor com o auxílio de um site para descomplicar processos de exame?
->    Resposta:
->    Todos os cinco entrevistados acreditam que o site seria uma boa "aposta" para melhorar o relacionamento empresa-funcionario.
->   
->   *Pergunta 3 - Você acredita que criando um site para esse tipo de problema, tiraria a demanda excessiva do RH?
->    Resposta:
->    Dentre todas as respostas, a grande maioria falou que acredita que diminuiria a demanda, mas reforçou a ideia de que a maioria das empresas já possuem uma contratada para isso.
->   
->   *Pergunta 4 - Qual o seu pensamento sobre conectar as clínicas e o setor responsável pela marcação de exame? Justifique
->    Resposta: De forma geral, os entrevistados gostaram da ideia, mas ainda sim acreditam que deveria ser visto com mais cuidado esse aspecto, visando o deslocamento.
->   
->   *Pergunta 5 - Como funcionário, gostaria de ser avisado previamente e de maneira organizada quando marcado o exame? Enquanto RH, acha que seria efeciente receber notificações antes do vencimento do exame?
->    Resposta:
->    Os entrevistados acreditam que seria bom avisar os funcionários 30 dias antes, e após isso avisar constantemente até a data do exame. Já com o RH disseram a mesma coisa.
->   
->   *Pergunta 6 - Por fim, qual o seu pensamento sobre criar um site justamente para diminuir demandas, facilitar e tornar exigente a marcação de exames ? Tem alguma coisa a acrescentar?
->    Resposta:
->    Todos responderam de forma especifica que seria uma forma mais organizada de controlar as agendas, tornando uma coisa não só do RH. Além disso, seria útil para a empresa e interessante, viável e facilitador.
->   
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
->   Entrevistados: RH, Funcionários e donos
->   Local: Empresa
->   Data: 28/08 - 31/08
->
-> 1- O que os participantes falaram ou fizeram que surpreendeu, ou falas mais significativas.
-> -> O que mais surpreendeu foi a iniciativa de alguns participantes em falar sobre o assunto, e descobrimos que varia muito esse problema, e que diferentemente do que havia dado como certeza, as empresas médias e pequenas possuem mais problemas com isso.
->
-> 2- Aspectos que importaram mais para os participantes
-> ->  Criação do site em si.
+  Entrevistas qualitativas:
+    *Pergunta 1 - A sua empresa possui uma clínica própria ou terceirizada? Se a segunda opção, já teve problemas com a marcação na clínica ?
+    Resposta :
+       Todos os entrevistados afirmaram que a empresa em que trabalha possui outra empresa responsável.
+       Dois entrevistados responderam que não possuíram nenhum tipo de problema com marcação.
+       Três entrevistados afirmaram que já tiveram problemas com esse assunto, sendo avisados de última hora.
+    
+    *Pergunta 2 - Você acredita que a comunicação empresa-funcionario  seria melhor com o auxílio de um site para descomplicar processos de exame?
+     Resposta:
+     Todos os cinco entrevistados acreditam que o site seria uma boa "aposta" para melhorar o relacionamento empresa-funcionario.
+    
+    *Pergunta 3 - Você acredita que criando um site para esse tipo de problema, tiraria a demanda excessiva do RH?
+     Resposta:
+     Dentre todas as respostas, a grande maioria falou que acredita que diminuiria a demanda, mas reforçou a ideia de que a maioria das empresas já possuem uma contratada para isso.
+    
+    *Pergunta 4 - Qual o seu pensamento sobre conectar as clínicas e o setor responsável pela marcação de exame? Justifique
+     Resposta: De forma geral, os entrevistados gostaram da ideia, mas ainda sim acreditam que deveria ser visto com mais cuidado esse aspecto, visando o deslocamento.
+    
+    *Pergunta 5 - Como funcionário, gostaria de ser avisado previamente e de maneira organizada quando marcado o exame? Enquanto RH, acha que seria efeciente receber notificações antes do vencimento do exame?
+     Resposta:
+     Os entrevistados acreditam que seria bom avisar os funcionários 30 dias antes, e após isso avisar constantemente até a data do exame. Já com o RH disseram a mesma coisa.
+    
+    *Pergunta 6 - Por fim, qual o seu pensamento sobre criar um site justamente para diminuir demandas, facilitar e tornar exigente a marcação de exames ? Tem alguma coisa a acrescentar?
+     Resposta:
+     Todos responderam de forma especifica que seria uma forma mais organizada de controlar as agendas, tornando uma coisa não só do RH. Além disso, seria útil para a empresa e interessante, viável e facilitador.
+    
+  * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+    Entrevistados: RH, Funcionários e donos
+    Local: Empresa
+    Data: 28/08 - 31/08
+ 
+  1- O que os participantes falaram ou fizeram que surpreendeu, ou falas mais significativas.
+  -> O que mais surpreendeu foi a iniciativa de alguns participantes em falar sobre o assunto, e descobrimos que varia muito esse problema, e que diferentemente do que havia dado como certeza, as empresas médias e pequenas possuem mais problemas com isso.
+ 
+  2- Aspectos que importaram mais para os participantes
+ ->  Criação do site em si.
       Achar formar de facilitar a marcação com a clínica.
       Evitar erros constantes relacionados aos exames e buscar precisão.
->
-> 3-Principais temas ou aprendizados que surgiram desta entrevista
-> -> Assuntos como a sobrecarga do RH
+ 
+  3-Principais temas ou aprendizados que surgiram desta entrevista
+  -> Assuntos como a sobrecarga do RH
      A demora dentro das clínicas de trabalho
      Variáveis que pode ocorrer dentro do site com o RH com a clínica
->
-> 4- Novos tópicos ou questões para explorar no futuro
+ 
+  4- Novos tópicos ou questões para explorar no futuro
 -> Uma coisa falada que chamou a atenção do grupo foi justamente o tempo que o funcionário gasta em ir na clínica e o tempo de espera. Ou seja, buscar uma forma de otimizar o tempo , evitando atrasos de marcação, além de controlar o tempo. Outra coisa é a criação dentro do site com um calendário disponibilizado pela clínica para a empresa.
 
 ## Etapa de Definição
