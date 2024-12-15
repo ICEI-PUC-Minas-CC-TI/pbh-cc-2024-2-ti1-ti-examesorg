@@ -87,7 +87,7 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
 
 > Matriz CSD:
 >
->  Certezas :
+>  *Certezas :
 >   - O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
     - Não é um assunto priorizado dentro dos recursos humanos de uma empresa
     - Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
