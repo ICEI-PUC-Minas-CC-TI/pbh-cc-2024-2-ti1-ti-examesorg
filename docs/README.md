@@ -255,8 +255,6 @@ Porque/Para : que não ocorra nenhum problema, como o encaixe de última hora, d
 
 ## Proposta de Valor
 
-*✳✳✳ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳✳✳*
-
 ##### Proposta para Persona
 
 ![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
@@ -319,12 +317,11 @@ O Primórdio do site contendo informações gerais
 
 ### User Flow
 
-![Exemplo de fluxo de telas](images/exemplo-userfloww)
+![Exemplo de fluxo de telas](https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-examesorg/blob/main/docs/images/exemplo-userfloww.jpg)
 
 
 
 ### Protótipo Interativo
-
 
 
 ✅ [Protótipo Interativo (FIGMA)](https://www.figma.com/proto/mMST96mdrdGOgBwI9YQXGZ/TI?node-id=0-1&t=AtegAwHmRx90OWUU-1)
@@ -343,8 +340,8 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVKmcdvuE=/?share_link_id=826190493922                      |
 | Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-examesorg                   |
 | Hospedagem do site          | Vercel     | https://pbh-cc-2024-2-ti1-ti-examesorg.vercel.app/                                       |
-| Protótipo Interativo        | MarvelApp  | https://www.figma.com/design/mMST96mdrdGOgBwI9YQXGZ/TI?node-id=0-1&t=ZjNUpPMnBdDQVjI7-1  |
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+| Protótipo Interativo        | Figma      | https://www.figma.com/design/mMST96mdrdGOgBwI9YQXGZ/TI?node-id=0-1&t=ZjNUpPMnBdDQVjI7-1  |
+
 
 ## Gerenciamento do Projeto
 
@@ -362,13 +359,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
 
-[![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
->
-> Inclua um link para o vídeo do projeto.
+[![Vídeo do projeto](images/video.png)](https://youtu.be/vA5JL6O_S20)
 
 ## Funcionalidades
 
@@ -434,11 +425,7 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 > Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
 >
 > Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+
 
 ## Módulos e APIs
 
@@ -446,20 +433,18 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 **Images**:
 
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
+* Unsplash - [https://unsplash.com/](https://unsplash.com/)
+* Google - [https://www.google.com/](https://www.google.com/)
 
 **Fonts:**
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/)
 
 **Scripts:**
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* jQuery - [http://www.jquery.com/](http://www.jquery.com/) 
+* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
 
 # Referências
 
@@ -467,10 +452,6 @@ As referências utilizadas no trabalho foram:
 
 * SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
 > **Orientações**:
 >
 > - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
