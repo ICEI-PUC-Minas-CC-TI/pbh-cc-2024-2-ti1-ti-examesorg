@@ -419,6 +419,19 @@ Coleta de dados da empresa.
 }
 ```
 
+##### Estrutura de Dados - Acessibilidade
+
+Configurações relacionadas à acessibilidade do sistema, utilizadas para personalizar a experiência de navegação dos usuários com base em suas necessidades específicas:
+Atualiza acessibilidade.
+
+```json
+  {
+    "leitorDeTela": true,
+    "contrasteAlto": false,
+    "aumentoDeFonte": false
+  }
+```
+
 ## Módulos e APIs
 
 Esta seção apresenta os módulos e APIs utilizados na solução
