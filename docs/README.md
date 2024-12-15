@@ -85,9 +85,9 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
 
 ## Etapa de Entendimento
 
-> * **Matriz CSD**:
+> Matriz CSD:
 >
-> * Certezas :
+>  Certezas :
 >   - O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
     - Não é um assunto priorizado dentro dos recursos humanos de uma empresa
     - Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
@@ -100,7 +100,7 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
    - Seria útil que criar uma aba que conecte a empresa com uma clinica? 
    - Seria possível realizar o agendamento de forma automática na clinica caso a empresa optasse por isso?
   
-> * **Mapa de stakeholders**:
+>  Mapa de stakeholders:
 > - Pessoas Fundamentais.
     Setor de RH
     Funcionários
@@ -111,7 +111,7 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
     Empresários
     Sindicatos
     Seguranças do trabalho
-> * **Entrevistas qualitativas**:
+> Entrevistas qualitativas:
 >   *Pergunta 1 - A sua empresa possui uma clínica própria ou terceirizada? Se a segunda opção, já teve problemas com a marcação na clínica ?
 >   Resposta :
 >      Todos os entrevistados afirmaram que a empresa em que trabalha possui outra empresa responsável.
