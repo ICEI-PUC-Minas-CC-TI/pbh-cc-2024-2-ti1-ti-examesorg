@@ -1,4 +1,4 @@
-# Introdução
+![image](https://github.com/user-attachments/assets/74a29c95-3c1d-4d4c-a10f-eb96bd3c7085)# Introdução
 
 Projeto de organização de exames periódicos 
 
@@ -365,9 +365,9 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Carrossel
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite a inclusão, leitura e exibição de informação.
 
 * **Estrutura de dados:** [Carrossel](#ti_ed_contatos)
 * **Instruções de acesso:**
@@ -375,7 +375,165 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Clique nas setas e mova o carrossel
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/exemplo-carrossel.png)
+
+##### Funcionalidade 2 - Menu
+
+Permite uma melhor navegação no site.
+
+* **Estrutura de dados:** [Menu](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no ícone superior à direita
+  * Selecione uma das opções de navegação
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-menu.png)
+
+##### Funcionalidade 3 - Cadastro da empresa
+
+Permite à empresa entrar com seus dados.
+
+* **Estrutura de dados:** [Cadastro da empresa](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no botão "Agendar agora mesmo"
+  * Preencha os dados da empresa
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-cadastro-empresa.png)
+
+##### Funcionalidade 4 - Cadastro de usuário
+
+Permite ao usuário/funcionário entrar com seus dados.
+
+* **Estrutura de dados:** [Cadastro de usuário](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no botão "Agendar agora mesmo"
+  * Preencha os dados da empresa e clique em "Enviar"
+  * Preencha os dados do usuário
+  * Caso deseje retirar um usuário, use o ícone vermelho do "X"
+  * Os botões de Exportar/Importar planilha, permitem facilitar o processo a partir de dados locais e/ou salvar de forma local para agilizar o processo no futuro 
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-cadastro-usuario.png)
+
+##### Funcionalidade 5 - Captcha
+
+Verifica se o usuário não é um robô.
+
+* **Estrutura de dados:** [Captcha](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no botão "Agendar agora mesmo"
+  * Preencha os dados da empresa e clique em "Enviar"
+  * Preencha os dados do usuário
+  * Clique na caixinha de marcar o captcha
+  * Depois clique no botão "Clique para verificar"
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-captcha.png)
+
+##### Funcionalidade 6 - Planos e Valores
+
+Permite ao usuário escolher o plano que mais se adequa aos seus objetivos.
+
+* **Estrutura de dados:** [Planos e Valores](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no botão "Agendar agora mesmo"
+  * Preencha os dados da empresa e clique em "Enviar"
+  * Preencha os dados do usuário
+  * Clique na caixinha de marcar o captcha
+  * Depois clique no botão "Clique para verificar"
+  * Clique em um dos planos
+  * Selecione uma das opções disponiveis (de valores)
+  * Clique em "Comprar", onde havera uma estimativa do valor
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-planos-e-valores.png)
+
+##### Funcionalidade 7 - Pagamento
+
+Permite ao usuário preencher com os dados de pagamento.
+
+* **Estrutura de dados:** [Pagamento](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no botão "Agendar agora mesmo"
+  * Preencha os dados da empresa e clique em "Enviar"
+  * Preencha os dados do usuário
+  * Clique na caixinha de marcar o captcha
+  * Depois clique no botão "Clique para verificar"
+  * Clique em um dos planos
+  * Selecione uma das opções disponiveis (de valores)
+  * Clique em "Comprar", onde havera uma estimativa do valor
+  * Preencha os dados de pagamento
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-pagamento.png)
+
+##### Funcionalidade 8 - Mapa
+
+Permite ao usuário localizar clínicas próximas.
+
+* **Estrutura de dados:** [Mapa](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no ícone superior à direita
+  * Selecione a opção "Clínicas Próximas" dentre as opções
+  * Interaja com o mapa para vasculhar
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-mapa.png)
+
+##### Funcionalidade 9 - Suporte
+
+Permite ao usuário entrar em contato com nossa equipe de suporte.
+
+* **Estrutura de dados:** [Suporte](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no ícone superior à direita
+  * Selecione a opção "Suporte" dentre as opções
+  * Escolha uma dentre as opções e clique em iniciar chat
+  * Preencha os campos e clique em iniciar chat, onde sera redirecionado para o whatsapp
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-suporte.png)
+
+##### Funcionalidade 10 - Administração
+
+Permite ao administrador, o acesso as empresas/usuários cadastrados e seus respectivos produtos.
+
+* **Estrutura de dados:** [Administração](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no ícone superior à direita
+  * Selecione a opção "Administração" dentre as opções
+  * Preencha os dados da empresa/funcionario desejado
+  * Clique em "buscar funcionário/empresa"
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-administracao.png)
+
+##### Funcionalidade 11 - Dashboard (de administracão)
+
+Permite ao administrador, o acesso as empresas/usuários cadastrados e seus respectivos produtos.
+
+* **Estrutura de dados:** [Dashboard](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site 
+  * Clique no ícone superior à direita
+  * Selecione a opção "Administração" dentre as opções
+  * Preencha os dados da empresa/funcionario desejado
+  * Clique em "buscar funcionário/empresa"
+  * Visualize todos os dados relacionados
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/exemplo-dashboard.png)
+
 
 ## Estruturas de Dados
 
