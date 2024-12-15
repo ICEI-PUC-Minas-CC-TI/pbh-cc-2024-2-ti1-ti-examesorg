@@ -108,13 +108,16 @@ Matriz CSD:
 Pessoas Fundamentais.
     Setor de RH
     Funcionários
+    
 Pessoas Importantes
     Gestores
     Clínicas ocupacionais
+    
 Pessoas Influenciadoras
     Empresários
     Sindicatos
     Seguranças do trabalho
+    
   Entrevistas qualitativas:
   
     *Pergunta 1 - A sua empresa possui uma clínica própria ou terceirizada? Se a segunda opção, já teve problemas com a marcação na clínica ?
@@ -349,7 +352,7 @@ Divisão de papéis no grupo e apresentação da estrutura da ferramenta de cont
 
 ![Exemplo de Kanban](images/exemplo-kanban.png)
 
-[Kanban link (Miro)](https://miro.com/app/board/uXjVLcTighs=/)
+![Kanban link (Miro)](https://miro.com/app/board/uXjVLcTighs=/)
 
 # Solução Implementada
 
