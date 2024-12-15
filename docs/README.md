@@ -256,24 +256,41 @@ Porque/Para : que não ocorra nenhum problema, como o encaixe de última hora, d
 
 ### Requisitos Funcionais
 
+
 |RF-01 - O site possui um carrossel na página inicial com informações.
+
 |RF-02 - Página de cadastro de empresa.
+
 |RF-03 - Página de cadastro de funcionário, que gera uma planilha para ser instalada após o cadastro.
+
 |RF-04 – Captcha de verificação.
+
 |RF-05 - Página de pagamento.
+
 |RF-06 - Página de administração.
+
 |RF-07 - Página de planos disponíveis pelo ExamesOrg.
+
 |RF-08 – Mapa de clínicas próximas.
+
 |RF-09 - Gráfico de proximidade das clínicas.
+
 |RF-10 – Localizador para a adequação dos valores de cada região.
+
 |RF-11 - Página de suporte.
+
 |RF-12 - Calendário na página de cadastro de funcionários.
+
 
 ### Requisitos não Funcionais
 
+
 |RNF-01 – Responsividade.
+
 |RNF-02 - Disponível durante 24/07 dias.
+
 |RNF-03 – Acessibilidade de alto contraste e aumento de letra.
+
 |RNF-04 - Disponível no GitHub.
 
 
@@ -294,7 +311,7 @@ O Primórdio do site contendo informações gerais
 
 ### User Flow
 
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
+![Exemplo de fluxo de telas](images/exemplo-userfloww)
 
 
 
