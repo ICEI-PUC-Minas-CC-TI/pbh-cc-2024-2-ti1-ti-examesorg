@@ -88,26 +88,26 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
 Matriz CSD:
 
    Certezas :
-   - O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
-    - Não é um assunto priorizado dentro dos recursos humanos de uma empresa
-    - Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
+    O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
+    Não é um assunto priorizado dentro dos recursos humanos de uma empresa
+    Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
    Suposições:
-   - Facilitará a demanda do RH (recursos humanos).
-   - Tornará mais eficiente a comunicação empresa-trabalhador.
-   - Promoverá uma boa relação com as clinicas que realizam exames periodicos.
+     Facilitará a demanda do RH (recursos humanos).
+     Tornará mais eficiente a comunicação empresa-trabalhador.
+     Promoverá uma boa relação com as clinicas que realizam exames periodicos.
    Dúvidas:
-   - Somente o RH terá acesso ou os colaboradores também?
-   - Seria útil que criar uma aba que conecte a empresa com uma clinica? 
-   - Seria possível realizar o agendamento de forma automática na clinica caso a empresa optasse por isso?
+     Somente o RH terá acesso ou os colaboradores também?
+     Seria útil que criar uma aba que conecte a empresa com uma clinica? 
+     Seria possível realizar o agendamento de forma automática na clinica caso a empresa optasse por isso?
   
    Mapa de stakeholders:
-  - Pessoas Fundamentais.
+Pessoas Fundamentais.
     Setor de RH
     Funcionários
-  - Pessoas Importantes
+Pessoas Importantes
     Gestores
     Clínicas ocupacionais
-  - Pessoas Influenciadoras
+Pessoas Influenciadoras
     Empresários
     Sindicatos
     Seguranças do trabalho
