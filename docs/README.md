@@ -377,54 +377,47 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
 ![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
-
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Usuário
 
-Contatos da aplicação
+Pagamento:
+Coleta de dados do usuário.
 
 ```json
   {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
+    "fullName": "Edson Arantes do Nascimento",
+    "email": "edsonarantes@gmail.com",
+    "address": "Rua - Numero - Bairro",
+    "city": "Belo Horizonte",
+    "state": "Minas Gerais",
+    "zipCode": "31456-105",
+    "cardName": "Edson Arantes do Nascimento",
+    "cardNumber": "9999 9999 9999 9999",
+    "cardExpMonth": "Março",
+    "cardExpYear": "2032",
+    "cardCVV": "456",
+    "installments": "1"
   }
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Empresa
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+Registro dos usuários do sistema utilizados para login e para o perfil do sistema:
+Coleta de dados da empresa.
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
+    "cnpj": "00.000.000/0000-00",
+    "celular": "(00) 00000-0000",
+    "inscricao": "123456",
+    "inicioAtividade": "01/01/23",
+    "email": "exemplo@email.com"
+}
 ```
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
-
 
 ## Módulos e APIs
 
