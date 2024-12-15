@@ -24,7 +24,7 @@ A documentação do projeto é estruturada da seguinte forma:
 6. Solução
 7. Referências Bibliográficas
 
-✅ [Documentação de Design Thinking (MIRO)] 
+✅ ![Documentação de Design Thinking (MIRO)](https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-examesorg/blob/main/docs/images/G3%20-%20Exames%20peri%C3%B3dicos-1.pdf)
 
 # Contexto
 O projeto HexamsOrg busca ser uma ferramenta capaz de auxiliar os setores de rh, empresas e os próprio funcionários, peritindo mais tempo e liberdade aos envolvidos, deixando de lado o estresse e a desorganização
@@ -88,13 +88,17 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
 Matriz CSD:
 
    Certezas :
-    O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
-    Não é um assunto priorizado dentro dos recursos humanos de uma empresa
+    O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas;
+    Não é um assunto priorizado dentro dos recursos humanos de uma empresa;
     Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
+
+    
    Suposições:
-     Facilitará a demanda do RH (recursos humanos).
-     Tornará mais eficiente a comunicação empresa-trabalhador.
+     Facilitará a demanda do RH (recursos humanos);
+     Tornará mais eficiente a comunicação empresa-trabalhador;
      Promoverá uma boa relação com as clinicas que realizam exames periodicos.
+
+     
    Dúvidas:
      Somente o RH terá acesso ou os colaboradores também?
      Seria útil que criar uma aba que conecte a empresa com uma clinica? 
@@ -112,6 +116,7 @@ Pessoas Influenciadoras
     Sindicatos
     Seguranças do trabalho
   Entrevistas qualitativas:
+  
     *Pergunta 1 - A sua empresa possui uma clínica própria ou terceirizada? Se a segunda opção, já teve problemas com a marcação na clínica ?
     Resposta :
        Todos os entrevistados afirmaram que a empresa em que trabalha possui outra empresa responsável.
