@@ -1,14 +1,18 @@
 # Introdução
 
-Informações básicas do projeto.
+Projeto de organização de exames periódicos 
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** [HexamsOrg]
+* **Repositório GitHub:** [https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-examesorg.git]
 * **Membros da equipe:**
+  
+  * Izadora Galarza Alves(https://github.com/IzadoraGalarza)
+  * Daniel Alves Gonçalves (https://github.com/danielalvesbr)
+  * Rafael De Sena Sampaio (https://github.com/rafasnna)
+  * Felipe Silva Barros(https://github.com/FelipeBarros2)
+  * Felipe De Oliveira Mafra(https://github.com/Felipe-Mafra)
+  * Mateus Esteves Reis(https://github.com/mts-design)
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -20,98 +24,205 @@ A documentação do projeto é estruturada da seguinte forma:
 6. Solução
 7. Referências Bibliográficas
 
-✅ [Documentação de Design Thinking (MIRO)](files/processo-dt.pdf)
+✅ [Documentação de Design Thinking (MIRO)] 
 
 # Contexto
-
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+O projeto HexamsOrg busca ser uma ferramenta capaz de auxiliar os setores de rh, empresas e os próprio funcionários, peritindo mais tempo e liberdade aos envolvidos, deixando de lado o estresse e a desorganização
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Tudo começou com a observação dos problemas existentes dentro de uma empresa, principalmente no setor de rh, onde a demanda é muitas vezes excessiva e sofre com problemas de falta de organização, atrapalhando uma boa comunicação funcionário e empresa, além de prejudica os próprios trabalhadores do rh com serviço extra
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+O principal objetivo do HexamsOrg é ser um diferencial dentro do setor de saúde ocupacional, sendo um auxiliar importante dentro das empresas, dando relevância aos funcionários que sofrem com a desorganização de seus setores, e de certa forma, terem que lidar com o problema de forma improvisada e em cima da hora.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Ou seja, o ExamesOrg almeja fornecer uma ferramenta que permita ao setor de recursos humanos analisar dados relacionados à saúde dos colaboradores de maneira eficiente. Com a centralização das informações em um formato acessível, os gestores poderão identificar padrões e tendências, facilitando a tomada de decisões estratégicas em relação à saúde ocupacional. Essa análise não apenas ajudará as empresas a se manterem em conformidade com as legislações, mas também permitirá que elas implementem melhorias contínuas, promovendo o bem-estar dos colaboradores e, consequentemente, um ambiente de trabalho mais produtivo.
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+A justificativa para o projeto é a importância que a realização de exames períodicos possui na vida dos trabalhadores e da empresa, afinal é uma obrigação ordenada por lei.
+Além disso, isso é uma segurança dada ao funcionário, uma preocupação que deve existir anuma relação empresa-funcionário.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A justificativa para o desenvolvimento do projeto ExamesOrg está fundamentada na crescente necessidade de as empresas cumprirem rigorosamente as obrigações legais relacionadas à saúde ocupacional. Com a legislação exigindo a realização de exames periódicos, torna-se imprescindível que as organizações estabeleçam processos eficazes para gerenciar essas demandas. A falta de conformidade pode resultar em penalidades legais e, mais importante, em riscos à saúde dos colaboradores, o que ressalta a urgência de uma solução inovadora.
+
+Além disso, a comunicação deficiente entre o setor de recursos humanos e os funcionários é um desafio recorrente nas empresas. Muitas vezes, os colaboradores não estão cientes das datas e da importância dos exames, o que pode levar a atrasos e à falta de realização. O ExamesOrg foi concebido para enfrentar esse problema, proporcionando um meio eficaz de comunicação e lembretes automatizados, garantindo que todos os envolvidos estejam alinhados e cientes de suas responsabilidades.
+
+Por fim, investir em uma ferramenta como o ExamesOrg não apenas melhora a gestão dos exames, mas também contribui para a construção de uma cultura organizacional que valoriza a saúde e o bem-estar dos colaboradores. Um ambiente de trabalho que prioriza a saúde ocupacional tende a ser mais produtivo, resultando em colaboradores mais engajados e satisfeitos. Assim, a implementação do ExamesOrg se justifica não apenas pela necessidade de conformidade legal, mas também pela oportunidade de promover um ambiente de trabalho mais saudável e colaborativo, beneficiando tanto as empresas quanto seus funcionários.
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+*Setor de Recursos Humanos
+O setor de recursos humanos é crucial para a gestão eficaz da saúde ocupacional dentro das organizações. Esses profissionais são responsáveis por garantir que a empresa cumpra as obrigações legais relacionadas aos exames periódicos, monitorando a saúde dos colaboradores e implementando políticas que promovam um ambiente de trabalho seguro. Com a crescente complexidade das legislações trabalhistas, a necessidade de ferramentas que auxiliem na organização e na comunicação se torna ainda mais evidente.
+O ExamesOrg é um recurso valioso para o RH, pois oferece uma plataforma que centraliza informações, facilitando o agendamento dos exames. Essa eficiência permite que os profissionais se concentrem em tarefas estratégicas, ao invés de se perderem em atividades administrativas. Ao melhorar a gestão dos exames, o ExamesOrg também ajuda o RH a mitigar riscos legais e a promover uma cultura de saúde dentro da empresa.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
+*Trabalhadores
+Os trabalhadores são o coração de qualquer organização e, portanto, devem ter acesso a um ambiente seguro e saudável. A realização regular de exames periódicos é essencial para detectar precocemente problemas de saúde que podem ser agravados pelas condições de trabalho. Muitos colaboradores, no entanto, não estão cientes da importância desses exames ou das datas em que devem ser realizados, o que pode levar a consequências negativas para sua saúde.
+Ao direcionar o ExamesOrg para os trabalhadores, a plataforma busca facilitar a comunicação sobre os exames, disponibilizando informações relevantes. Essa abordagem garante que os colaboradores estejam informados e motivados a participar ativamente de sua saúde ocupacional, contribuindo para um ambiente de trabalho mais seguro e promovendo seu bem- estar geral.
+
+
+*Empresários
+Os empresários desempenham um papel fundamental na criação de ambientes de trabalho que priorizam a saúde e a segurança de seus colaboradores. Eles são responsáveis por implementar políticas de saúde ocupacional e garantir que as normas legais sejam seguidas. No entanto, a falta de ferramentas adequadas pode levar a uma gestão ineficiente dos exames periódicos, resultando em riscos legais e à saúde dos funcionários. O ExamesOrg se apresenta como uma solução prática para empresários que desejam otimizar a gestão de saúde dentro de suas organizações. Com a automação e a centralização das informações, os empresários podem reduzir custos, melhorar a conformidade legal e, ao mesmo tempo, demonstrar um compromisso genuíno com o bem-estar de seus colaboradores. Isso, por sua vez, pode resultar em maior satisfação e produtividade dos funcionários.
+
+
+*Clínicas de Trabalho
+As clínicas de trabalho são responsáveis por realizar os exames periódicos e garantir que os colaboradores estejam em condições adequadas para desempenhar suas funções. Elas desempenham um papel vital na saúde ocupacional, mas muitas vezes enfrentam desafios relacionados à comunicação com as empresas e à gestão dos agendamentos. Isso pode resultar em atrasos e na falta de acompanhamento necessário para garantir que todos os exames sejam realizados corretamente.
+
+O ExamesOrg é uma ferramenta que facilita essa comunicação, permitindo que as clínicas recebam informações organizadas sobre os colaboradores que precisam realizar exames. Com a organização das informações e um sistema centralizado, as clínicas podem melhorar sua eficiência operacional, garantindo que os exames sejam realizados dentro do prazo e de forma adequada. Isso não apenas beneficia as clínicas, mas também contribui para a saúde geral dos trabalhadores.
+
+
+*Técnicos de Segurança do Trabalho
+Os técnicos de segurança do trabalho são responsáveis por identificar e minimizar os riscos no ambiente laboral, garantindo que as condições de trabalho sejam seguras para todos os colaboradores. Eles desempenham um papel essencial na promoção da saúde ocupacional, realizando avaliações e implementando medidas preventivas. No entanto, a falta de comunicação eficaz sobre os exames periódicos pode dificultar sua capacidade de monitorar a saúde dos funcionários.
+
+O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois oferece uma plataforma que centraliza as informações sobre os exames e facilita a comunicação com o RH e os colaboradores. Com acesso a dados atualizados, os técnicos podem identificar rapidamente quais funcionários precisam realizar exames, garantindo que as medidas de segurança sejam implementadas de forma eficaz. Isso contribui para um ambiente de trabalho mais seguro e saudável, alinhando-se aos objetivos dos profissionais de segurança.
+
+
+
+  
 # Product Discovery
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
+> * **Matriz CSD**:
 >
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
+> * Certezas :
+>   - O problema em questão é uma dificuldade real dentro dos gerenciamentos das grandes empresas
+    - Não é um assunto priorizado dentro dos recursos humanos de uma empresa
+    - Essa falta de gerenciamento afeta tanto a empresa, quanto os colaboradores (funcionários).
+> * Suposições:
+>  - Facilitará a demanda do RH (recursos humanos).
+   - Tornará mais eficiente a comunicação empresa-trabalhador.
+   - Promoverá uma boa relação com as clinicas que realizam exames periodicos.
+ * Dúvidas:
+   - Somente o RH terá acesso ou os colaboradores também?
+   - Seria útil que criar uma aba que conecte a empresa com uma clinica? 
+   - Seria possível realizar o agendamento de forma automática na clinica caso a empresa optasse por isso?
+  
+> * **Mapa de stakeholders**:
+> - Pessoas Fundamentais.
+    Setor de RH
+    Funcionários
+> - Pessoas Importantes
+    Gestores
+    Clínicas ocupacionais
+> - Pessoas Influenciadoras
+    Empresários
+    Sindicatos
+    Seguranças do trabalho
+> * **Entrevistas qualitativas**:
+>   *Pergunta 1 - A sua empresa possui uma clínica própria ou terceirizada? Se a segunda opção, já teve problemas com a marcação na clínica ?
+>   Resposta :
+>      Todos os entrevistados afirmaram que a empresa em que trabalha possui outra empresa responsável.
+>      Dois entrevistados responderam que não possuíram nenhum tipo de problema com marcação.
+>      Três entrevistados afirmaram que já tiveram problemas com esse assunto, sendo avisados de última hora.
+>   
+>   *Pergunta 2 - Você acredita que a comunicação empresa-funcionario  seria melhor com o auxílio de um site para descomplicar processos de exame?
+>    Resposta:
+>    Todos os cinco entrevistados acreditam que o site seria uma boa "aposta" para melhorar o relacionamento empresa-funcionario.
+>   
+>   *Pergunta 3 - Você acredita que criando um site para esse tipo de problema, tiraria a demanda excessiva do RH?
+>    Resposta:
+>    Dentre todas as respostas, a grande maioria falou que acredita que diminuiria a demanda, mas reforçou a ideia de que a maioria das empresas já possuem uma contratada para isso.
+>   
+>   *Pergunta 4 - Qual o seu pensamento sobre conectar as clínicas e o setor responsável pela marcação de exame? Justifique
+>    Resposta: De forma geral, os entrevistados gostaram da ideia, mas ainda sim acreditam que deveria ser visto com mais cuidado esse aspecto, visando o deslocamento.
+>   
+>   *Pergunta 5 - Como funcionário, gostaria de ser avisado previamente e de maneira organizada quando marcado o exame? Enquanto RH, acha que seria efeciente receber notificações antes do vencimento do exame?
+>    Resposta:
+>    Os entrevistados acreditam que seria bom avisar os funcionários 30 dias antes, e após isso avisar constantemente até a data do exame. Já com o RH disseram a mesma coisa.
+>   
+>   *Pergunta 6 - Por fim, qual o seu pensamento sobre criar um site justamente para diminuir demandas, facilitar e tornar exigente a marcação de exames ? Tem alguma coisa a acrescentar?
+>    Resposta:
+>    Todos responderam de forma especifica que seria uma forma mais organizada de controlar as agendas, tornando uma coisa não só do RH. Além disso, seria útil para a empresa e interessante, viável e facilitador.
+>   
 > * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+>   Entrevistados: RH, Funcionários e donos
+>   Local: Empresa
+>   Data: 28/08 - 31/08
+>
+> 1- O que os participantes falaram ou fizeram que surpreendeu, ou falas mais significativas.
+> -> O que mais surpreendeu foi a iniciativa de alguns participantes em falar sobre o assunto, e descobrimos que varia muito esse problema, e que diferentemente do que havia dado como certeza, as empresas médias e pequenas possuem mais problemas com isso.
+>
+> 2- Aspectos que importaram mais para os participantes
+> ->  Criação do site em si.
+      Achar formar de facilitar a marcação com a clínica.
+      Evitar erros constantes relacionados aos exames e buscar precisão.
+>
+> 3-Principais temas ou aprendizados que surgiram desta entrevista
+> -> Assuntos como a sobrecarga do RH
+     A demora dentro das clínicas de trabalho
+     Variáveis que pode ocorrer dentro do site com o RH com a clínica
+>
+> 4- Novos tópicos ou questões para explorar no futuro
+-> Uma coisa falada que chamou a atenção do grupo foi justamente o tempo que o funcionário gasta em ir na clínica e o tempo de espera. Ou seja, buscar uma forma de otimizar o tempo , evitando atrasos de marcação, além de controlar o tempo. Outra coisa é a criação dentro do site com um calendário disponibilizado pela clínica para a empresa.
 
 ## Etapa de Definição
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+* Everson (Funcionário) - Constantemente precisa realizar exames períodicos e sempre ocorre algum imprevisto por parte da empresa ou clínica.
+ Objetos físicos:
+ - Anda com o celular para qualquer lugar
+ - Sempre com boné na cabeça
+ - Botina ou chinelo dependendo do local - Rua ou casa
+ Objetos digitais:
+ - Banco  - Consultar saldo e salário
+ - WhatsApp - Grupos de família e trabalho
+ - Gov.br - Assuntos de INSS e FGTS
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+Objetivos:
+ - Evitar transtornos no local de trabalho por conta de atrasos com os exames periódicos.
+ - Manter os exames em dia.
+ - Se programar previamente para a data do exame
+
+Por que ele precisa do nosso serviço?
+ - Não passar por situações complicadas na empresa, como o atraso de exame devido a falta de organização
+ - Se preparar antes, recebendo um aviso da marcação com uma semana de antecedência.
+
+* Fernanda (Gestora de rh) - Se sente sobrecarregada com as altas demandas do RH e acaba errando em detalhes que requerem organização e tempo, como marcação de exames.
+ Objetos físicos:
+ - Adora usar terninho - Usa muito no trabalho
+ - Óculos escuro - Preocupa com cuidados dermatológicos
+ Objetos digitais:
+ - App de dieta - Gosta de cuidar do corpo
+ - App de música - Ouve música em todo lugar possível
+ - Instagram - Postar foto de lugares e coisas bonitas
+
+
+ Objetivos: 
+ - Diminuir as horas extras que faz durante a semana no trabalho
+ - Facilitar a organização do RH em relação aos exames
+ - Tornar mais fácil a comunicação com o funcionário
+
+ Por que ele precisa do nosso serviço?
+  - A Fernanda precisa desse serviço justamente para melhorar a qualidade de vida em relação ao trabalho, coisa que ela preza muito.
+
+* Jõao Paulo (Empresário) - Dono de uma empresa que possui uma quantidade de funcionário e procura melhorar o desempenho, necessitando de um bom RH.
+  Objetos físicos:
+  - Moto harley - Anda com ela sempre que pode
+  - Óculos de grau - Não consegue enxergar nada sem eles
+  - Celular de última geração - Precisa sempre estar conectado
+ Objetos digitais:
+  - Bancos - Investimento e controle de renda
+  - Waze - Para se locomover
+  - Whatsapp - Para se comunicar frequentemente
+ 
+  Objetivos:
+  - Tornar a própria empresa mais organizada
+  - Ser influente no ramo de gestão
+  - Ter funcionários fiéis
+
+Por que ele precisa do nosso serviço?
+  - João Paulo precisa desse serviço para atender seus objetivos como um empresário, buscando sempre fortalecer sua empresa
+
+
+
+![image](https://github.com/user-attachments/assets/0be0a09b-4b8e-42b0-a3b7-611ee54fe7d4) - Everson
+![image](https://github.com/user-attachments/assets/e288ee13-d182-4b4c-b8e7-0c01ee6471b6) - Fernanda
+![image](https://github.com/user-attachments/assets/a8de950d-dfe1-4014-a73f-02b50f4c6e79) - Jõao Paulo
+
 
 # Product Design
 
