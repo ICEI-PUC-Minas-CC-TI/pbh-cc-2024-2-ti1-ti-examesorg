@@ -162,7 +162,7 @@ O ExamesOrg se torna um aliado importante para os técnicos de segurança, pois 
 
 ### Personas
 
-* Everson (Funcionário) - Constantemente precisa realizar exames períodicos e sempre ocorre algum imprevisto por parte da empresa ou clínica.
+ Everson (Funcionário) - Constantemente precisa realizar exames períodicos e sempre ocorre algum imprevisto por parte da empresa ou clínica.
  Objetos físicos:
  - Anda com o celular para qualquer lugar
  - Sempre com boné na cabeça
@@ -181,7 +181,7 @@ Por que ele precisa do nosso serviço?
  - Não passar por situações complicadas na empresa, como o atraso de exame devido a falta de organização
  - Se preparar antes, recebendo um aviso da marcação com uma semana de antecedência.
 
-* Fernanda (Gestora de rh) - Se sente sobrecarregada com as altas demandas do RH e acaba errando em detalhes que requerem organização e tempo, como marcação de exames.
+Fernanda (Gestora de rh) - Se sente sobrecarregada com as altas demandas do RH e acaba errando em detalhes que requerem organização e tempo, como marcação de exames.
  Objetos físicos:
  - Adora usar terninho - Usa muito no trabalho
  - Óculos escuro - Preocupa com cuidados dermatológicos
@@ -199,7 +199,7 @@ Por que ele precisa do nosso serviço?
  Por que ele precisa do nosso serviço?
   - A Fernanda precisa desse serviço justamente para melhorar a qualidade de vida em relação ao trabalho, coisa que ela preza muito.
 
-* Jõao Paulo (Empresário) - Dono de uma empresa que possui uma quantidade de funcionário e procura melhorar o desempenho, necessitando de um bom RH.
+ Jõao Paulo (Empresário) - Dono de uma empresa que possui uma quantidade de funcionário e procura melhorar o desempenho, necessitando de um bom RH.
   Objetos físicos:
   - Moto harley - Anda com ela sempre que pode
   - Óculos de grau - Não consegue enxergar nada sem eles
